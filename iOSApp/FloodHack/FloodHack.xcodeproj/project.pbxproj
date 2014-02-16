@@ -23,6 +23,7 @@
 		4609728918B0DD7600C7C0EE /* FloodHackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4609728818B0DD7600C7C0EE /* FloodHackTests.m */; };
 		4609729A18B0E86E00C7C0EE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4609729918B0E86E00C7C0EE /* MapKit.framework */; };
 		4609729D18B0E98200C7C0EE /* FLUDMapsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4609729C18B0E98200C7C0EE /* FLUDMapsViewController.m */; };
+		4609729F18B0FDD900C7C0EE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4609729E18B0FDD900C7C0EE /* CFNetwork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		4609729918B0E86E00C7C0EE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4609729B18B0E98200C7C0EE /* FLUDMapsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLUDMapsViewController.h; sourceTree = "<group>"; };
 		4609729C18B0E98200C7C0EE /* FLUDMapsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLUDMapsViewController.m; sourceTree = "<group>"; };
+		4609729E18B0FDD900C7C0EE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4609729F18B0FDD900C7C0EE /* CFNetwork.framework in Frameworks */,
 				4609729A18B0E86E00C7C0EE /* MapKit.framework in Frameworks */,
 				4609726018B0DD7600C7C0EE /* CoreGraphics.framework in Frameworks */,
 				4609726218B0DD7600C7C0EE /* UIKit.framework in Frameworks */,
@@ -107,6 +110,7 @@
 		4609725C18B0DD7600C7C0EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4609729E18B0FDD900C7C0EE /* CFNetwork.framework */,
 				4609729918B0E86E00C7C0EE /* MapKit.framework */,
 				4609725D18B0DD7600C7C0EE /* Foundation.framework */,
 				4609725F18B0DD7600C7C0EE /* CoreGraphics.framework */,
