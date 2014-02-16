@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>E18E639C-4AD7-4DA5-88F1-9BF04970FF6D</string>
+	<string>4ECAB67F-60DC-4F8F-826F-E9468A35D023</string>
 	<key>IDESourceControlProjectName</key>
 	<string>FloodHack</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>8BC08D01-1754-4BDD-A3F4-D33F4C36C552</key>
-		<string>https://github.com/JackPeterFletch/FloodHack</string>
+		<key>E42CAF4A-EF59-41F6-9DD0-7C8302EE086F</key>
+		<string>https://github.com/JackPeterFletch/FloodHack.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>iOSApp/FloodHack/FloodHack.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>8BC08D01-1754-4BDD-A3F4-D33F4C36C552</key>
+		<key>E42CAF4A-EF59-41F6-9DD0-7C8302EE086F</key>
 		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/JackPeterFletch/FloodHack</string>
+	<string>https://github.com/JackPeterFletch/FloodHack.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>8BC08D01-1754-4BDD-A3F4-D33F4C36C552</string>
+	<string>E42CAF4A-EF59-41F6-9DD0-7C8302EE086F</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>8BC08D01-1754-4BDD-A3F4-D33F4C36C552</string>
+			<string>E42CAF4A-EF59-41F6-9DD0-7C8302EE086F</string>
 			<key>IDESourceControlWCCName</key>
 			<string>FloodHack</string>
 		</dict>
