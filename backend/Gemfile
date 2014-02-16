@@ -5,6 +5,8 @@ gem 'binding_of_caller'
 gem 'thin'
 gem 'twilio-ruby'
 gem 'bootstrap-sass'
+gem 'devise'
+gem 'rpush'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
