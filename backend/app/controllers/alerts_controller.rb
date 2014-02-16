@@ -1,3 +1,5 @@
+require 'apns'
+
 class AlertsController < ApplicationController
 	before_filter :authenticate_user!
 
