@@ -33,10 +33,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    NSURL *url = [NSURL URLWithString:@"https://eafa.shoothill.com/home/shoothill/729AFF68-20BF-4482-B4EC-405BFB386FF4"];
+    NSURL *url = [NSURL URLWithString:@"http://eafa.shoothill.com/Home/BBC/86AD0194-A30F-4434-8C5D-FE7C0ED486D7"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [_WebMap setScalesPageToFit:YES];
     [_WebMap loadRequest:request];
+    //_CrowdMap.delegate = self;
+    
+    _CrowdMap.showsUserLocation = true;
+    _CrowdMap.userTrackingMode = MKUserTrackingModeFollow;
+	// Do any additional setup after loading the view.
     
     //Set event when SegControl hit
     [_MapChooser addTarget:self
