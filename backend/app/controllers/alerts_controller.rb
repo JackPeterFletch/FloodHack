@@ -37,22 +37,22 @@ class AlertsController < ApplicationController
 	end
 
 	# Send alert to registered user via Twilio/APNS etc
-	#def send
+	def send
 		# Set APNS params
-	#	APNS.host = 'gateway.sandbox.push.apple.com'
-	#	APNS.pem = '/APNS/sandbox.pem'
-	#	APNS.port = 2195
+		APNS.host = 'gateway.sandbox.push.apple.com'
+		APNS.pem = '/APNS/sandbox.pem'
+		APNS.port = 2195
 
 		# John's Device ID for testing
-		#device_token = 'b2938ecd4d42a71fe8ece9c671e8f0cdda1292872758a09ce39e05b3f54f1dd0'
+		device_token = 'b2938ecd4d42a71fe8ece9c671e8f0cdda1292872758a09ce39e05b3f54f1dd0'
 		
-		#n1 = APNS::Notification.new(device_token, 'Hello iPhone!' )
+		n1 = APNS::Notification.new(device_token, 'Hello iPhone!' )
 
-    #n2 = APNS::Notification.new(device_token, :alert => 'Hello iPhone!', :badge => 1, :sound => 'default')
+    n2 = APNS::Notification.new(device_token, :alert => 'Hello iPhone!', :badge => 1, :sound => 'default')
     
-    #APNS.send_notifications([n1, n2])
+    APNS.send_notifications([n1, n2])
 		
-	#end
+	end
 
 	private
 
