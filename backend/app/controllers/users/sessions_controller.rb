@@ -1,4 +1,5 @@
 class Api::SessionsController < Api::BaseController
+	prepend_before_filter :require_no_authentication, :only => [:create ]
 	before_filter :authenticate_user!, :except => [:create, :destroy]
 	before_filter :ensure_params_exist
 	respond_to :json

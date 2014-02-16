@@ -30,7 +30,7 @@ class AlertsController < ApplicationController
 		@alert = Alert.find(params[:id])
 
 		if @alert.update(alert_params)
-			redirect_to(alert_path, :notice => "Alert Updated!")
+			redirect_to(root_url, :notice => "Alert Updated!")
 		else
 			redirect_to(edit_alert_path(@alert.id), :alert => "Error! Alert Not Updated!")
 		end 
@@ -53,7 +53,7 @@ class AlertsController < ApplicationController
 	private
 
 	def alert_params
-		params.require(:alert).permit(:id, :lat, :lng, :postcode, :type, :desc, :user_id, :created_at, :updated_at)
+		params.require(:alert).permit(:id, :lat, :lng, :postcode, :alertType, :desc, :user_id, :created_at, :updated_at)
 	end
 
 end

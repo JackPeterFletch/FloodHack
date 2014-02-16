@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20140216122100) do
     t.decimal  "lat",        precision: 10, scale: 6
     t.decimal  "lng",        precision: 10, scale: 6
     t.string   "postcode",                            default: "", null: false
-    t.string   "type"
+    t.string   "alertType"
     t.text     "desc"
     t.integer  "user_id"
     t.datetime "created_at"
