@@ -1,5 +1,5 @@
 class AlertsController < ApplicationController
-	#skip_before_filter :autheticate_alert!, :only => [:new, :create]
+	#skip_before_filter :authenticate_alert!, :only => [:new, :create]
 
 	def new
 	  @alert = Alert.new
@@ -30,6 +30,15 @@ class AlertsController < ApplicationController
 		else
 			redirect_to(edit_alert_path(@alert.id)), :alert => "Error! Alert Not Updated!"
 		end 
+	end
+
+	# Send alert to registered user via Twilio/APNS etc
+	def send
+		# Set APNS params
+		APNS.host = 'gateway.sandbox.push.apple.com'
+		APNS.pem = '/APNS/sandbox.pem'
+		APNS.port = 2195
+		
 	end
 
 	private
