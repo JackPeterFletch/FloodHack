@@ -14,33 +14,13 @@
 {
     // Override point for customization after application launch.
     
-    // Register with apple that this app will use push notification
-    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeAlert |
-                                                                           UIRemoteNotificationTypeSound | UIRemoteNotificationTypeBadge)];
+    // Let the device know we want to receive push notifications
+	[[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+     (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
     
     return YES;
 }
-
-NSString* stringFromDeviceTokenData(NSData *deviceToken)
-{
-    const char *data = [deviceToken bytes];
-    NSMutableString* token = [NSMutableString string];
-    for (int i = 0; i < [deviceToken length]; i++) {
-        [token appendFormat:@"%02.2hhX", data[i]];
-    }
-    
-    return [token copy];
-}
-
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
-{
-    // Convert the binary data token into an NSString (see below for the implementation of this function)
-    NSString *deviceTokenAsString = stringFromDeviceTokenData(deviceToken);
-    
-    // Show the device token obtained from apple to the log
-    NSLog(@"deviceToken: %@", deviceTokenAsString);
-}
-
+							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -66,6 +46,24 @@ NSString* stringFromDeviceTokenData(NSData *deviceToken)
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
+{
+    // Convert NSData object into correctly formatted NSString
+    const unsigned *tokenBytes = [deviceToken bytes];
+    NSString *hexToken = [NSString stringWithFormat:@"%08x%08x%08x%08x%08x%08x%08x%08x",
+                          ntohl(tokenBytes[0]), ntohl(tokenBytes[1]), ntohl(tokenBytes[2]),
+                          ntohl(tokenBytes[3]), ntohl(tokenBytes[4]), ntohl(tokenBytes[5]),
+                          ntohl(tokenBytes[6]), ntohl(tokenBytes[7])];
+    
+    // Debug output
+	NSLog(@"My token is: %@", hexToken);
+}
+
+- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
+{
+	NSLog(@"Failed to get token, error: %@", error);
 }
 
 @end
