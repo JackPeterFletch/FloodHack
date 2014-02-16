@@ -26,9 +26,9 @@ class UsersController < ApplicationController
 		@user = current_user
 
 		if @user.update(user_params)
-			redirect_to(user_path), :notice => "User Updated!"
+			redirect_to user_path, :notice => "User Updated!"
 		else
-			redirect_to(edit_user_path(@user.id)), :alert => "Error! User Not Updated"
+			redirect_to edit_user_path(@user.id), :alert => "Error! User Not Updated"
 		end 
 	end
 

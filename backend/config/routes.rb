@@ -1,13 +1,11 @@
 FloodHack::Application.routes.draw do
-	namespace :api do
-	  devise_for :users
-		resources :recipes, :only=>[:index, :show]
+	namespace :api, defaults: { format: "json" } do
+	  devise_for :users, :controllers => { registrations: 'users/registrations', sessions: 'users/sessions' }
 	end  
-
-	devise_for :users
-
+	
 	resources :users
 	resources :alerts
+	resources :api
 
   match 'alerttest' => 'alerts#alertTest', :via => :get
 
