@@ -1,16 +1,20 @@
 class AlertsController < ApplicationController
-	#skip_before_filter :autheticate_alert!, :only => [:new, :create]
+	before_filter :authenticate_user!
 
 	def new
 	  @alert = Alert.new
 	end
 
+	def index
+	  @alerts = Alert.all
+	end
+
 	def create
 		@alert = Alert.new(alert_params)
 		if @alert.save
-			redirect_to root_url, :notice => "Alert Saved!"
+			redirect_to(root_url, :notice => "Alert Saved!")
 		else
-			render "new", :alert => "Alert Not Saved!"
+			render("new", :alert => "Alert Not Saved!")
 		end
 	end
 
@@ -26,9 +30,9 @@ class AlertsController < ApplicationController
 		@alert = Alert.find(params[:id])
 
 		if @alert.update(alert_params)
-			redirect_to(alert_path), :notice => "Alert Updated!"
+			redirect_to(alert_path, :notice => "Alert Updated!")
 		else
-			redirect_to(edit_alert_path(@alert.id)), :alert => "Error! Alert Not Updated!"
+			redirect_to(edit_alert_path(@alert.id), :alert => "Error! Alert Not Updated!")
 		end 
 	end
 

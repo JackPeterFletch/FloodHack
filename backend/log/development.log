@@ -24,3 +24,2209 @@ Migrating to CreateAlerts (20140216122100)
   [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
   [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-16 13:17:57 +0000
+
+SyntaxError - /Users/rcresswe/Documents/FloodHack/backend/app/controllers/alerts_controller.rb:29: syntax error, unexpected ',', expecting keyword_end
+			redirect_to(alert_path), :notice => "Alert Updated!"
+			                        ^
+/Users/rcresswe/Documents/FloodHack/backend/app/controllers/alerts_controller.rb:31: syntax error, unexpected ',', expecting keyword_end
+...to(edit_alert_path(@alert.id)), :alert => "Error! Alert Not ...
+...                               ^:
+  activesupport (4.0.2) lib/active_support/dependencies.rb:424:in `'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:424:in `block in load_file'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:616:in `new_constants_in'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:423:in `load_file'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:324:in `require_or_load'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.2) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.2) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:535:in `get'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:566:in `constantize'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__1458507960569562209__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.1) lib/thin/connection.rb:82:in `block in pre_process'
+  thin (1.6.1) lib/thin/connection.rb:80:in `pre_process'
+  thin (1.6.1) lib/thin/connection.rb:55:in `process'
+  thin (1.6.1) lib/thin/connection.rb:41:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.1) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.1) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.0.2) lib/rails/commands/server.rb:84:in `start'
+  railties (4.0.2) lib/rails/commands.rb:76:in `block in <top (required)>'
+  railties (4.0.2) lib/rails/commands.rb:71:in `<top (required)>'
+  bin/rails:4:in `<main>'
+
+
+
+Started POST "/__better_errors/2156175980/variables" for 127.0.0.1 at 2014-02-16 13:17:57 +0000
+  [1m[36mAlert Load (3.7ms)[0m  [1mSELECT "alerts".* FROM "alerts"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-16 13:23:08 +0000
+
+SyntaxError - /Users/rcresswe/Documents/FloodHack/backend/app/controllers/alerts_controller.rb:29: syntax error, unexpected ',', expecting keyword_end
+			redirect_to(alert_path), :notice => "Alert Updated!"
+			                        ^
+/Users/rcresswe/Documents/FloodHack/backend/app/controllers/alerts_controller.rb:31: syntax error, unexpected ',', expecting keyword_end
+...to(edit_alert_path(@alert.id)), :alert => "Error! Alert Not ...
+...                               ^:
+  activesupport (4.0.2) lib/active_support/dependencies.rb:424:in `'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:424:in `block in load_file'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:616:in `new_constants_in'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:423:in `load_file'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:324:in `require_or_load'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.2) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.2) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:535:in `get'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:566:in `constantize'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__1458507960569562209__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.1) lib/thin/connection.rb:82:in `block in pre_process'
+  thin (1.6.1) lib/thin/connection.rb:80:in `pre_process'
+  thin (1.6.1) lib/thin/connection.rb:55:in `process'
+  thin (1.6.1) lib/thin/connection.rb:41:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.1) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.1) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.0.2) lib/rails/commands/server.rb:84:in `start'
+  railties (4.0.2) lib/rails/commands.rb:76:in `block in <top (required)>'
+  railties (4.0.2) lib/rails/commands.rb:71:in `<top (required)>'
+  bin/rails:4:in `<main>'
+
+
+
+Started POST "/__better_errors/2187814160/variables" for 127.0.0.1 at 2014-02-16 13:23:08 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-16 13:24:10 +0000
+
+SyntaxError - /Users/rcresswe/Documents/FloodHack/backend/app/controllers/alerts_controller.rb:29: syntax error, unexpected ',', expecting keyword_end
+			redirect_to(alert_path), :notice => "Alert Updated!"
+			                        ^
+/Users/rcresswe/Documents/FloodHack/backend/app/controllers/alerts_controller.rb:31: syntax error, unexpected ',', expecting keyword_end
+...to(edit_alert_path(@alert.id)), :alert => "Error! Alert Not ...
+...                               ^:
+  activesupport (4.0.2) lib/active_support/dependencies.rb:424:in `'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:424:in `block in load_file'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:616:in `new_constants_in'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:423:in `load_file'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:324:in `require_or_load'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.2) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.2) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:535:in `get'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:566:in `constantize'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__1426188000670087457__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.1) lib/thin/connection.rb:82:in `block in pre_process'
+  thin (1.6.1) lib/thin/connection.rb:80:in `pre_process'
+  thin (1.6.1) lib/thin/connection.rb:55:in `process'
+  thin (1.6.1) lib/thin/connection.rb:41:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.1) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.1) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.0.2) lib/rails/commands/server.rb:84:in `start'
+  railties (4.0.2) lib/rails/commands.rb:76:in `block in <top (required)>'
+  railties (4.0.2) lib/rails/commands.rb:71:in `<top (required)>'
+  bin/rails:4:in `<main>'
+
+
+
+Started POST "/__better_errors/2185564060/variables" for 127.0.0.1 at 2014-02-16 13:24:10 +0000
+
+
+Started POST "/__better_errors/2185564060/variables" for 127.0.0.1 at 2014-02-16 13:24:24 +0000
+
+
+Started POST "/__better_errors/2185564060/variables" for 127.0.0.1 at 2014-02-16 13:29:34 +0000
+
+
+Started POST "/__better_errors/2185564060/variables" for 127.0.0.1 at 2014-02-16 13:29:36 +0000
+
+
+Started POST "/__better_errors/2185564060/variables" for 127.0.0.1 at 2014-02-16 13:30:38 +0000
+
+
+Started POST "/__better_errors/2185564060/variables" for 127.0.0.1 at 2014-02-16 13:30:41 +0000
+
+
+Started POST "/__better_errors/2185564060/variables" for 127.0.0.1 at 2014-02-16 13:30:43 +0000
+
+
+Started POST "/__better_errors/2185564060/variables" for 127.0.0.1 at 2014-02-16 13:30:44 +0000
+
+
+Started POST "/__better_errors/2185564060/variables" for 127.0.0.1 at 2014-02-16 13:30:45 +0000
+
+
+Started POST "/__better_errors/2185564060/variables" for 127.0.0.1 at 2014-02-16 13:30:48 +0000
+
+
+Started POST "/__better_errors/2185564060/variables" for 127.0.0.1 at 2014-02-16 13:30:49 +0000
+
+
+Started POST "/__better_errors/2185564060/variables" for 127.0.0.1 at 2014-02-16 13:31:46 +0000
+
+
+Started POST "/__better_errors/2185564060/variables" for 127.0.0.1 at 2014-02-16 13:31:51 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-16 13:32:53 +0000
+Processing by AlertsController#index as HTML
+  Rendered alerts/index.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 61ms
+
+NoMethodError - undefined method `each' for nil:NilClass:
+  app/views/alerts/index.html.erb:19:in `_app_views_alerts_index_html_erb___4021684458159735288_2159195940'
+  actionpack (4.0.2) lib/action_view/template.rb:143:in `block in render'
+  activesupport (4.0.2) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.2) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/rcresswe/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:403:in `_run__489787533543024733__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__1426188000670087457__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.1) lib/thin/connection.rb:82:in `block in pre_process'
+  thin (1.6.1) lib/thin/connection.rb:80:in `pre_process'
+  thin (1.6.1) lib/thin/connection.rb:55:in `process'
+  thin (1.6.1) lib/thin/connection.rb:41:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.1) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.1) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.0.2) lib/rails/commands/server.rb:84:in `start'
+  railties (4.0.2) lib/rails/commands.rb:76:in `block in <top (required)>'
+  railties (4.0.2) lib/rails/commands.rb:71:in `<top (required)>'
+  bin/rails:4:in `<main>'
+
+
+
+Started POST "/__better_errors/2186214880/variables" for 127.0.0.1 at 2014-02-16 13:32:54 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-16 13:33:03 +0000
+
+SyntaxError - /Users/rcresswe/Documents/FloodHack/backend/app/controllers/alerts_controller.rb:29: syntax error, unexpected ',', expecting keyword_end
+			redirect_to(alert_path), :notice => "Alert Updated!"
+			                        ^:
+  activesupport (4.0.2) lib/active_support/dependencies.rb:424:in `'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:424:in `block in load_file'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:616:in `new_constants_in'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:423:in `load_file'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:324:in `require_or_load'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.2) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.2) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:535:in `get'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:566:in `constantize'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__1426188000670087457__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.1) lib/thin/connection.rb:82:in `block in pre_process'
+  thin (1.6.1) lib/thin/connection.rb:80:in `pre_process'
+  thin (1.6.1) lib/thin/connection.rb:55:in `process'
+  thin (1.6.1) lib/thin/connection.rb:41:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.1) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.1) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.0.2) lib/rails/commands/server.rb:84:in `start'
+  railties (4.0.2) lib/rails/commands.rb:76:in `block in <top (required)>'
+  railties (4.0.2) lib/rails/commands.rb:71:in `<top (required)>'
+  bin/rails:4:in `<main>'
+
+
+
+Started POST "/__better_errors/2164789940/variables" for 127.0.0.1 at 2014-02-16 13:33:03 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-16 13:33:12 +0000
+Processing by AlertsController#index as HTML
+  Rendered alerts/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError - undefined method `each' for nil:NilClass:
+  app/views/alerts/index.html.erb:19:in `_app_views_alerts_index_html_erb___4021684458159735288_2159195940'
+  actionpack (4.0.2) lib/action_view/template.rb:143:in `block in render'
+  activesupport (4.0.2) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.2) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/rcresswe/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:403:in `_run__489787533543024733__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__1426188000670087457__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.1) lib/thin/connection.rb:82:in `block in pre_process'
+  thin (1.6.1) lib/thin/connection.rb:80:in `pre_process'
+  thin (1.6.1) lib/thin/connection.rb:55:in `process'
+  thin (1.6.1) lib/thin/connection.rb:41:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.1) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.1) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.0.2) lib/rails/commands/server.rb:84:in `start'
+  railties (4.0.2) lib/rails/commands.rb:76:in `block in <top (required)>'
+  railties (4.0.2) lib/rails/commands.rb:71:in `<top (required)>'
+  bin/rails:4:in `<main>'
+
+
+
+Started POST "/__better_errors/2180136040/variables" for 127.0.0.1 at 2014-02-16 13:33:12 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-16 13:34:06 +0000
+Processing by AlertsController#index as HTML
+  Rendered alerts/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError - undefined method `each' for nil:NilClass:
+  app/views/alerts/index.html.erb:19:in `_app_views_alerts_index_html_erb___4021684458159735288_2159195940'
+  actionpack (4.0.2) lib/action_view/template.rb:143:in `block in render'
+  activesupport (4.0.2) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.2) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/rcresswe/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:403:in `_run__489787533543024733__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__1426188000670087457__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.1) lib/thin/connection.rb:82:in `block in pre_process'
+  thin (1.6.1) lib/thin/connection.rb:80:in `pre_process'
+  thin (1.6.1) lib/thin/connection.rb:55:in `process'
+  thin (1.6.1) lib/thin/connection.rb:41:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.1) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.1) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.0.2) lib/rails/commands/server.rb:84:in `start'
+  railties (4.0.2) lib/rails/commands.rb:76:in `block in <top (required)>'
+  railties (4.0.2) lib/rails/commands.rb:71:in `<top (required)>'
+  bin/rails:4:in `<main>'
+
+
+
+Started POST "/__better_errors/2210866620/variables" for 127.0.0.1 at 2014-02-16 13:34:07 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-16 13:34:38 +0000
+Processing by AlertsController#index as HTML
+  [1m[36mAlert Load (0.5ms)[0m  [1mSELECT "alerts".* FROM "alerts"[0m
+  Rendered alerts/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 2915ms (Views: 2872.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-16 13:34:41 +0000
+Processing by AlertsController#index as HTML
+  [1m[35mAlert Load (0.1ms)[0m  SELECT "alerts".* FROM "alerts"
+  Rendered alerts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-16 13:34:41 +0000
+
+
+Started GET "/assets/alerts.js?body=1" for 127.0.0.1 at 2014-02-16 13:34:41 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-02-16 13:34:41 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-16 13:34:41 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-16 13:34:41 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-16 13:34:41 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-16 13:34:41 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-16 13:36:27 +0000
+Processing by AlertsController#index as HTML
+  [1m[36mAlert Load (0.4ms)[0m  [1mSELECT "alerts".* FROM "alerts"[0m
+  Rendered alerts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1140ms (Views: 1137.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-16 13:36:28 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-16 13:36:28 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-16 13:36:28 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-16 13:36:28 +0000
+
+
+Started GET "/assets/alerts.js?body=1" for 127.0.0.1 at 2014-02-16 13:36:28 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-02-16 13:36:28 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-16 13:36:28 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-16 13:38:59 +0000
+Processing by AlertsController#index as HTML
+  [1m[36mAlert Load (3.8ms)[0m  [1mSELECT "alerts".* FROM "alerts"[0m
+  Rendered alerts/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 135ms (Views: 64.6ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-16 13:39:00 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-16 13:39:00 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-16 13:39:00 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-16 13:39:00 +0000
+
+
+Started GET "/assets/alerts.js?body=1" for 127.0.0.1 at 2014-02-16 13:39:00 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-02-16 13:39:00 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-16 13:39:00 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-16 13:40:50 +0000
+Processing by AlertsController#index as HTML
+  [1m[35mAlert Load (0.2ms)[0m  SELECT "alerts".* FROM "alerts"
+  Rendered alerts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2369ms (Views: 2367.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-16 13:40:52 +0000
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-16 13:40:52 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-16 13:40:52 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-16 13:40:52 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-16 13:40:52 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-02-16 13:40:52 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-02-16 13:40:52 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-02-16 13:40:52 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-02-16 13:40:52 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-02-16 13:40:52 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-02-16 13:40:52 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-02-16 13:40:52 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-02-16 13:40:52 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-02-16 13:40:52 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-02-16 13:40:52 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-02-16 13:40:52 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-02-16 13:40:52 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-16 13:40:52 +0000
+
+
+Started GET "/assets/alerts.js?body=1" for 127.0.0.1 at 2014-02-16 13:40:52 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-16 13:40:52 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-02-16 13:40:52 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-16 13:41:16 +0000
+Processing by AlertsController#index as HTML
+  [1m[36mAlert Load (0.1ms)[0m  [1mSELECT "alerts".* FROM "alerts"[0m
+  Rendered alerts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1122ms (Views: 1121.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-16 13:41:17 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:17 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:17 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:17 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:17 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:17 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:17 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:17 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:17 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:17 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:17 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:17 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:17 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:17 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:17 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:17 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:17 +0000
+
+
+Started GET "/assets/alerts.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:17 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:17 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:17 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-16 13:41:39 +0000
+Processing by AlertsController#index as HTML
+  [1m[35mAlert Load (0.1ms)[0m  SELECT "alerts".* FROM "alerts"
+  Rendered alerts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1129ms (Views: 1127.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-16 13:41:40 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:40 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:40 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:40 +0000
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-16 13:41:40 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:40 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:40 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:40 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:40 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:40 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:40 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:40 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:40 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:40 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:40 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:40 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:40 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:40 +0000
+
+
+Started GET "/assets/alerts.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:40 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:40 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-02-16 13:41:41 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-16 13:42:00 +0000
+Processing by AlertsController#index as HTML
+  [1m[36mAlert Load (0.1ms)[0m  [1mSELECT "alerts".* FROM "alerts"[0m
+  Rendered alerts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1132ms (Views: 1131.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-16 13:42:01 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-02-16 13:42:01 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-16 13:42:01 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-16 13:42:01 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-16 13:42:01 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-02-16 13:42:01 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-02-16 13:42:01 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-02-16 13:42:01 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-02-16 13:42:01 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-02-16 13:42:01 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-02-16 13:42:01 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-02-16 13:42:01 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-02-16 13:42:01 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-02-16 13:42:01 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-02-16 13:42:01 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-16 13:42:01 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-02-16 13:42:01 +0000
+
+
+Started GET "/assets/alerts.js?body=1" for 127.0.0.1 at 2014-02-16 13:42:01 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-16 13:42:01 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-02-16 13:42:01 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-16 13:44:31 +0000
+Processing by AlertsController#index as HTML
+  [1m[35mAlert Load (0.2ms)[0m  SELECT "alerts".* FROM "alerts"
+  Rendered alerts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-16 13:44:31 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:31 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:31 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:31 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:31 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:31 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:31 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:31 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:31 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:31 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:32 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:32 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:32 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:32 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:32 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:32 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:32 +0000
+
+
+Started GET "/assets/alerts.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:32 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:32 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:32 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-16 13:44:37 +0000
+Processing by AlertsController#index as HTML
+  [1m[36mAlert Load (0.2ms)[0m  [1mSELECT "alerts".* FROM "alerts"[0m
+  Rendered alerts/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-16 13:44:38 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:38 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:38 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:38 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:38 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:38 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:38 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:38 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:38 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:38 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:38 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:38 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:38 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:38 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:38 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:38 +0000
+
+
+Started GET "/assets/alerts.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:38 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:38 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:38 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-16 13:44:38 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-16 13:45:27 +0000
+Processing by AlertsController#index as HTML
+  [1m[35mAlert Load (0.2ms)[0m  SELECT "alerts".* FROM "alerts"
+  Rendered alerts/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-16 13:45:27 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-16 13:45:27 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-16 13:45:27 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-16 13:45:27 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-02-16 13:45:27 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-02-16 13:45:27 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-02-16 13:45:27 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-02-16 13:45:27 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-02-16 13:45:27 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-02-16 13:45:27 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-02-16 13:45:27 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-02-16 13:45:27 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-02-16 13:45:27 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-02-16 13:45:27 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-02-16 13:45:27 +0000
+
+
+Started GET "/assets/alerts.js?body=1" for 127.0.0.1 at 2014-02-16 13:45:27 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-02-16 13:45:27 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-16 13:45:27 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-02-16 13:45:27 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-16 13:45:27 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-16 13:46:24 +0000
+Processing by AlertsController#index as HTML
+Completed 401 Unauthorized in 19ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-02-16 13:46:24 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (39.1ms)
+Completed 200 OK in 110ms (Views: 55.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-16 13:46:24 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-16 13:46:24 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-16 13:46:24 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-16 13:46:24 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-02-16 13:46:24 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-02-16 13:46:24 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-02-16 13:46:24 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-02-16 13:46:24 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-02-16 13:46:24 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-02-16 13:46:25 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-02-16 13:46:25 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-02-16 13:46:25 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-02-16 13:46:25 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-02-16 13:46:25 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-02-16 13:46:25 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-02-16 13:46:25 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-16 13:46:25 +0000
+
+
+Started GET "/assets/alerts.js?body=1" for 127.0.0.1 at 2014-02-16 13:46:25 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-16 13:46:25 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-02-16 13:46:25 +0000
+
+
+Started GET "/" for 10.100.84.174 at 2014-02-16 13:46:36 +0000
+Processing by AlertsController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 10.100.84.174 at 2014-02-16 13:46:36 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.100.84.174 at 2014-02-16 13:46:36 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:36 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:36 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:36 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:36 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:36 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:36 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:36 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:36 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:36 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:36 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:36 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:36 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:36 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:36 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:36 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:36 +0000
+
+
+Started GET "/assets/alerts.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:36 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:36 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:36 +0000
+
+
+Started GET "/users/sign_up" for 10.100.84.174 at 2014-02-16 13:46:39 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.100.84.174 at 2014-02-16 13:46:46 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ApkmeX+Rw9No1GQrvFTSNwYe1up1ScOUH+8aONHV8xs=", "user"=>{"email"=>"juaney.garcia@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'juaney.garcia@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (86.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Sun, 16 Feb 2014 13:46:46 UTC +00:00], ["email", "juaney.garcia@gmail.com"], ["encrypted_password", "$2a$10$2Ghh78lWS8xaQkMR7THCv.tMqfbfL1HGUeN7hKfVuriyatC1KYGnS"], ["updated_at", Sun, 16 Feb 2014 13:46:46 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `last_sign_in_ip`
+Binary data inserted for `string` type on column `current_sign_in_ip`
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["last_sign_in_at", Sun, 16 Feb 2014 13:46:47 UTC +00:00], ["current_sign_in_at", Sun, 16 Feb 2014 13:46:47 UTC +00:00], ["last_sign_in_ip", "10.100.84.174"], ["current_sign_in_ip", "10.100.84.174"], ["sign_in_count", 1], ["updated_at", Sun, 16 Feb 2014 13:46:47 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://10.100.84.171:3000/
+Completed 302 Found in 239ms (ActiveRecord: 90.9ms)
+
+
+Started GET "/" for 10.100.84.174 at 2014-02-16 13:46:47 +0000
+Processing by AlertsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mAlert Load (0.2ms)[0m  [1mSELECT "alerts".* FROM "alerts"[0m
+  Rendered alerts/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 40ms (Views: 11.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.100.84.174 at 2014-02-16 13:46:47 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:47 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:47 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:47 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:47 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:47 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:47 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:47 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:47 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:47 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:47 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:47 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:47 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:47 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:47 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:47 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:47 +0000
+
+
+Started GET "/assets/alerts.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:47 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:47 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.100.84.174 at 2014-02-16 13:46:47 +0000
+
+
+Started GET "/alerts/new" for 10.100.84.174 at 2014-02-16 13:46:49 +0000
+Processing by AlertsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 5ms
+
+ActionView::MissingTemplate (Missing template alerts/new, application/new with {:locale=>[:en], :formats=>[:html, :xml], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/rcresswe/Documents/FloodHack/backend/app/views"
+  * "/Users/rcresswe/.rvm/gems/ruby-2.0.0-p353/gems/devise-3.2.2/app/views"
+):
+  actionpack (4.0.2) lib/action_view/path_set.rb:46:in `find'
+  actionpack (4.0.2) lib/action_view/lookup_context.rb:122:in `find'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/rcresswe/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:413:in `_run__2182435125499629677__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__2343505877270756752__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:58:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.1) lib/thin/connection.rb:82:in `block in pre_process'
+  thin (1.6.1) lib/thin/connection.rb:80:in `catch'
+  thin (1.6.1) lib/thin/connection.rb:80:in `pre_process'
+  thin (1.6.1) lib/thin/connection.rb:55:in `process'
+  thin (1.6.1) lib/thin/connection.rb:41:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.1) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.1) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.0.2) lib/rails/commands/server.rb:84:in `start'
+  railties (4.0.2) lib/rails/commands.rb:76:in `block in <top (required)>'
+  railties (4.0.2) lib/rails/commands.rb:71:in `tap'
+  railties (4.0.2) lib/rails/commands.rb:71:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered /Users/rcresswe/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.8ms)
+
+
+Started GET "/alerts/new" for 10.100.84.174 at 2014-02-16 13:46:49 +0000
+Processing by AlertsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 3ms
+
+ActionView::MissingTemplate (Missing template alerts/new, application/new with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/rcresswe/Documents/FloodHack/backend/app/views"
+  * "/Users/rcresswe/.rvm/gems/ruby-2.0.0-p353/gems/devise-3.2.2/app/views"
+):
+  actionpack (4.0.2) lib/action_view/path_set.rb:46:in `find'
+  actionpack (4.0.2) lib/action_view/lookup_context.rb:122:in `find'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/rcresswe/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:413:in `_run__2182435125499629677__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__2343505877270756752__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:58:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.1) lib/thin/connection.rb:82:in `block in pre_process'
+  thin (1.6.1) lib/thin/connection.rb:80:in `catch'
+  thin (1.6.1) lib/thin/connection.rb:80:in `pre_process'
+  thin (1.6.1) lib/thin/connection.rb:55:in `process'
+  thin (1.6.1) lib/thin/connection.rb:41:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.1) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.1) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.0.2) lib/rails/commands/server.rb:84:in `start'
+  railties (4.0.2) lib/rails/commands.rb:76:in `block in <top (required)>'
+  railties (4.0.2) lib/rails/commands.rb:71:in `tap'
+  railties (4.0.2) lib/rails/commands.rb:71:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered /Users/rcresswe/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started GET "/alerts/new" for 10.100.84.174 at 2014-02-16 13:46:58 +0000
+Processing by AlertsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 4ms
+
+ActionView::MissingTemplate (Missing template alerts/new, application/new with {:locale=>[:en], :formats=>[:html, :xml], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/rcresswe/Documents/FloodHack/backend/app/views"
+  * "/Users/rcresswe/.rvm/gems/ruby-2.0.0-p353/gems/devise-3.2.2/app/views"
+):
+  actionpack (4.0.2) lib/action_view/path_set.rb:46:in `find'
+  actionpack (4.0.2) lib/action_view/lookup_context.rb:122:in `find'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/rcresswe/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:413:in `_run__2182435125499629677__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__2343505877270756752__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:58:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.1) lib/thin/connection.rb:82:in `block in pre_process'
+  thin (1.6.1) lib/thin/connection.rb:80:in `catch'
+  thin (1.6.1) lib/thin/connection.rb:80:in `pre_process'
+  thin (1.6.1) lib/thin/connection.rb:55:in `process'
+  thin (1.6.1) lib/thin/connection.rb:41:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.1) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.1) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.0.2) lib/rails/commands/server.rb:84:in `start'
+  railties (4.0.2) lib/rails/commands.rb:76:in `block in <top (required)>'
+  railties (4.0.2) lib/rails/commands.rb:71:in `tap'
+  railties (4.0.2) lib/rails/commands.rb:71:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered /Users/rcresswe/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started GET "/alerts/new" for 10.100.84.174 at 2014-02-16 13:46:58 +0000
+Processing by AlertsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 3ms
+
+ActionView::MissingTemplate (Missing template alerts/new, application/new with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/rcresswe/Documents/FloodHack/backend/app/views"
+  * "/Users/rcresswe/.rvm/gems/ruby-2.0.0-p353/gems/devise-3.2.2/app/views"
+):
+  actionpack (4.0.2) lib/action_view/path_set.rb:46:in `find'
+  actionpack (4.0.2) lib/action_view/lookup_context.rb:122:in `find'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/rcresswe/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:413:in `_run__2182435125499629677__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__2343505877270756752__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:58:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.1) lib/thin/connection.rb:82:in `block in pre_process'
+  thin (1.6.1) lib/thin/connection.rb:80:in `catch'
+  thin (1.6.1) lib/thin/connection.rb:80:in `pre_process'
+  thin (1.6.1) lib/thin/connection.rb:55:in `process'
+  thin (1.6.1) lib/thin/connection.rb:41:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.1) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.1) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.0.2) lib/rails/commands/server.rb:84:in `start'
+  railties (4.0.2) lib/rails/commands.rb:76:in `block in <top (required)>'
+  railties (4.0.2) lib/rails/commands.rb:71:in `tap'
+  railties (4.0.2) lib/rails/commands.rb:71:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered /Users/rcresswe/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-02-16 13:47:03 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.100.84.165 at 2014-02-16 13:47:12 +0000
+Processing by AlertsController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 10.100.84.165 at 2014-02-16 13:47:13 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.100.84.165 at 2014-02-16 13:47:13 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.100.84.165 at 2014-02-16 13:47:13 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.100.84.165 at 2014-02-16 13:47:13 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 10.100.84.165 at 2014-02-16 13:47:13 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 10.100.84.165 at 2014-02-16 13:47:13 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 10.100.84.165 at 2014-02-16 13:47:13 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 10.100.84.165 at 2014-02-16 13:47:13 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 10.100.84.165 at 2014-02-16 13:47:13 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 10.100.84.165 at 2014-02-16 13:47:13 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 10.100.84.165 at 2014-02-16 13:47:13 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.100.84.165 at 2014-02-16 13:47:13 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 10.100.84.165 at 2014-02-16 13:47:13 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 10.100.84.165 at 2014-02-16 13:47:14 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 10.100.84.165 at 2014-02-16 13:47:14 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 10.100.84.165 at 2014-02-16 13:47:14 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 10.100.84.165 at 2014-02-16 13:47:14 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 10.100.84.165 at 2014-02-16 13:47:14 +0000
+
+
+Started GET "/assets/alerts.js?body=1" for 10.100.84.165 at 2014-02-16 13:47:14 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.100.84.165 at 2014-02-16 13:47:14 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.100.84.165 at 2014-02-16 13:47:14 +0000
+
+
+Started POST "/users" for 127.0.0.1 at 2014-02-16 13:47:28 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vw1OOyNbPq5rdlJKms5aZ3i8aeR2CgyBYIivI6Wos4A=", "user"=>{"email"=>"crezzers@live.co.uk", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'crezzers@live.co.uk' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sun, 16 Feb 2014 13:47:28 UTC +00:00], ["email", "crezzers@live.co.uk"], ["encrypted_password", "$2a$10$maeQemvgFf.rRq1K5Qim7Oi8SHIw2BUPP1frfO9eK49VYKmYpK2Ti"], ["updated_at", Sun, 16 Feb 2014 13:47:28 UTC +00:00]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `last_sign_in_ip`
+Binary data inserted for `string` type on column `current_sign_in_ip`
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 2[0m  [["last_sign_in_at", Sun, 16 Feb 2014 13:47:28 UTC +00:00], ["current_sign_in_at", Sun, 16 Feb 2014 13:47:28 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Sun, 16 Feb 2014 13:47:28 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 93ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-16 13:47:28 +0000
+Processing by AlertsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mAlert Load (0.1ms)[0m  SELECT "alerts".* FROM "alerts"
+  Rendered alerts/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-16 13:47:28 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-16 13:47:28 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-16 13:47:28 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-16 13:47:28 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-02-16 13:47:28 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-02-16 13:47:28 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-02-16 13:47:28 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-02-16 13:47:28 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-02-16 13:47:28 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-02-16 13:47:28 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-02-16 13:47:28 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-02-16 13:47:28 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-02-16 13:47:28 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-02-16 13:47:28 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-02-16 13:47:28 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-02-16 13:47:28 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-16 13:47:28 +0000
+
+
+Started GET "/assets/alerts.js?body=1" for 127.0.0.1 at 2014-02-16 13:47:28 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-16 13:47:28 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-02-16 13:47:28 +0000
+
+
+Started GET "/users/sign_up" for 10.100.84.165 at 2014-02-16 13:50:57 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.100.84.165 at 2014-02-16 13:51:17 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ys426AHkur6O9yS1KwXng+e2qXxiSkfDIN20imYWOs=", "user"=>{"email"=>"Jackfletcher2010@googlemail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'jackfletcher2010@googlemail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 115ms (Views: 11.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.100.84.165 at 2014-02-16 13:51:18 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.100.84.165 at 2014-02-16 13:51:18 +0000
