@@ -7,6 +7,7 @@
 //
 
 #import "FLUDAppDelegate.h"
+#import "DataClass.h"
 
 @implementation FLUDAppDelegate
 
@@ -59,6 +60,12 @@
     
     // Debug output
 	NSLog(@"My token is: %@", hexToken);
+    
+    // Save device_id to disk
+    DataClass *obj=[DataClass getInstance];
+    obj.device_id = hexToken;
+    [obj.data_storage setValue:obj.device_id forKey:@"device_id"];
+    [obj.data_storage writeToFile:obj.filePath atomically:YES];
 }
 
 - (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error

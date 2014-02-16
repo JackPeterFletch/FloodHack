@@ -13,6 +13,8 @@ class AlertsController < ApplicationController
 		@alert = Alert.new(alert_params)
 		if @alert.save
 			redirect_to(root_url, :notice => "Alert Saved!")
+			# Send notifications
+			sendAlert(@alert)
 		else
 			render("new", :alert => "Alert Not Saved!")
 		end
