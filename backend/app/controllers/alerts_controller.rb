@@ -46,7 +46,7 @@ class AlertsController < ApplicationController
 		# For each user within 5 miles of the alert
 		@users = User.near([alert.longitude, alert.latitude], 5)
 		@users.each do |user|
-			notification = APNS::Notification.new(user.deviceID, :alert => 'Alert near your location', :badge => 1, :sound => 'default')
+			notification = APNS::Notification.new(user.deviceID, :alert => Alert.find(params[:id]).type + ' near your location', :badge => 1, :sound => 'default')
 			APNS.send_notications([notification])
 		end
 
