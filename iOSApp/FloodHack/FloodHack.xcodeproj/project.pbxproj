@@ -24,6 +24,8 @@
 		4609729A18B0E86E00C7C0EE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4609729918B0E86E00C7C0EE /* MapKit.framework */; };
 		4609729D18B0E98200C7C0EE /* FLUDMapsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4609729C18B0E98200C7C0EE /* FLUDMapsViewController.m */; };
 		4609729F18B0FDD900C7C0EE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4609729E18B0FDD900C7C0EE /* CFNetwork.framework */; };
+		460972A118B1185B00C7C0EE /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 460972A018B1185B00C7C0EE /* logo.png */; };
+		460972A318B118D000C7C0EE /* university-ukc-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 460972A218B118D000C7C0EE /* university-ukc-logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		4609729B18B0E98200C7C0EE /* FLUDMapsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLUDMapsViewController.h; sourceTree = "<group>"; };
 		4609729C18B0E98200C7C0EE /* FLUDMapsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLUDMapsViewController.m; sourceTree = "<group>"; };
 		4609729E18B0FDD900C7C0EE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		460972A018B1185B00C7C0EE /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		460972A218B118D000C7C0EE /* university-ukc-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "university-ukc-logo.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,8 @@
 		4609726418B0DD7600C7C0EE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				460972A218B118D000C7C0EE /* university-ukc-logo.png */,
+				460972A018B1185B00C7C0EE /* logo.png */,
 				4609726518B0DD7600C7C0EE /* FloodHack-Info.plist */,
 				4609726618B0DD7600C7C0EE /* InfoPlist.strings */,
 				4609726918B0DD7600C7C0EE /* main.m */,
@@ -250,8 +256,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				460972A118B1185B00C7C0EE /* logo.png in Resources */,
 				4609727618B0DD7600C7C0EE /* Images.xcassets in Resources */,
 				4609726818B0DD7600C7C0EE /* InfoPlist.strings in Resources */,
+				460972A318B118D000C7C0EE /* university-ukc-logo.png in Resources */,
 				4609727118B0DD7600C7C0EE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

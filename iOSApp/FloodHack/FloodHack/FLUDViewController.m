@@ -9,8 +9,8 @@
 #import "FLUDViewController.h"
 
 @interface FLUDViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *usernameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
+@property (weak, nonatomic) IBOutlet UITextField *usernameField;
 @property (strong, nonatomic) NSMutableData *responseData;
 
 @end
@@ -70,8 +70,19 @@
     NSNumber *ID = [jsonResultSet objectForKey:@"id"];
     
     //If authentication key there
+    NSNumber *authToken = [jsonResultSet objectForKey:@"authToken"];
+    
     //put key in app persistance
+    NSString *valueToSave = @"someValue";
+    [[NSUserDefaults standardUserDefaults]
+     setObject:valueToSave forKey:@"authKey"];
+    
+    //To Retrieve
+    //NSString *savedValue = [[NSUserDefaults standardUserDefaults]
+//stringForKey:@"preferenceName"];
+    
     //perform segue
+    [self performSegueWithIdentifier: @"loggedIn" sender: self];
 }
 
 @end
