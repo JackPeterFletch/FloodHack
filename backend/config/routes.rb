@@ -1,5 +1,10 @@
 FloodHack::Application.routes.draw do
-  devise_for :users
+	namespace :api do
+	  devise_for :users
+		resources :recipes, :only=>[:index, :show]
+	end  
+
+	devise_for :users
 
 	resources :users
 	resources :alerts

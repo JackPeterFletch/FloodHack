@@ -46,6 +46,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="usernameField:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="BXh-Pu-zhF"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oAb-Wv-ns6">
                                 <rect key="frame" x="81" y="313" width="158" height="30"/>
@@ -61,6 +64,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="login:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ivM-2a-gF7"/>
                                     <segue destination="ch5-IF-Lnc" kind="modal" id="6wV-jM-Anw"/>
                                 </connections>
                             </button>
@@ -76,6 +80,8 @@
                         <color key="backgroundColor" red="0.0" green="0.72922573787322065" blue="0.83763153698979598" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="passwordField" destination="oAb-Wv-ns6" id="8gK-cx-Idt"/>
+                        <outlet property="usernameField" destination="CYW-1t-Tvz" id="jh5-D8-Qwx"/>
                         <segue destination="ch5-IF-Lnc" kind="modal" id="rpD-qP-eN6"/>
                     </connections>
                 </viewController>
@@ -125,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vzY-qx-Z3B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1431" y="-388"/>
+            <point key="canvasLocation" x="1111" y="-294"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hPp-AF-T6f">
@@ -145,7 +151,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9tA-U2-F0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="773" y="130"/>
+            <point key="canvasLocation" x="663" y="130"/>
         </scene>
         <!--View Controller - Alerts-->
         <scene sceneID="AgV-0l-JZE">
@@ -272,7 +278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ppm-fB-ySB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1431" y="198"/>
+            <point key="canvasLocation" x="1463" y="164"/>
         </scene>
         <!--View Controller - Report-->
         <scene sceneID="dv1-PC-9cC">
@@ -321,7 +327,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qfo-u8-2Cz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1431" y="802"/>
+            <point key="canvasLocation" x="1111" y="460"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
