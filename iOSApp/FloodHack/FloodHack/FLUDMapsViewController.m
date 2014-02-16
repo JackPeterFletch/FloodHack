@@ -33,7 +33,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    NSURL *url = [NSURL URLWithString:@"http://www.google.com"];
+    NSURL *url = [NSURL URLWithString:@"https://eafa.shoothill.com/home/shoothill/729AFF68-20BF-4482-B4EC-405BFB386FF4"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [_WebMap setScalesPageToFit:YES];
     [_WebMap loadRequest:request];

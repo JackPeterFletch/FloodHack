@@ -13,9 +13,34 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    // Register with apple that this app will use push notification
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeAlert |
+                                                                           UIRemoteNotificationTypeSound | UIRemoteNotificationTypeBadge)];
+    
     return YES;
 }
-							
+
+NSString* stringFromDeviceTokenData(NSData *deviceToken)
+{
+    const char *data = [deviceToken bytes];
+    NSMutableString* token = [NSMutableString string];
+    for (int i = 0; i < [deviceToken length]; i++) {
+        [token appendFormat:@"%02.2hhX", data[i]];
+    }
+    
+    return [token copy];
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    // Convert the binary data token into an NSString (see below for the implementation of this function)
+    NSString *deviceTokenAsString = stringFromDeviceTokenData(deviceToken);
+    
+    // Show the device token obtained from apple to the log
+    NSLog(@"deviceToken: %@", deviceTokenAsString);
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
