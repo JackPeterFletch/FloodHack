@@ -6,8 +6,8 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :encrypted_password, :null => false, :default => ""
 			t.string :firstName, :null => false, :default => ""
 			t.string :lastName, :null => false, :default => ""
-			t.decimal :lat, {:precision => 10, :scale => 6}
-			t.decimal :lng, {:precision => 10, :scale => 6}
+			t.float :latitude
+			t.float :longitude
 			t.string :postcode, :null => false, :default => ""
 			t.string :phone
 			t.string :deviceID
