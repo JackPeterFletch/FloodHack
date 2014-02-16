@@ -40,7 +40,7 @@ class AlertsController < ApplicationController
 	def sendAlert
 		# Set APNS params
 		APNS.host = 'gateway.sandbox.push.apple.com'
-		APNS.pem = '/APNS/sandbox.pem'
+		APNS.pem = 'APNS/sandbox.pem'
 		APNS.port = 2195
 
 		# John's Device ID for testing
