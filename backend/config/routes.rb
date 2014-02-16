@@ -9,6 +9,7 @@ FloodHack::Application.routes.draw do
 	resources :users
 	resources :alerts
 
+  match 'users/:email/:password' => 'users#create' => :via :post
   match 'alerttest' => 'alerts#alertTest', :via => :get
 
   # The priority is based upon order of creation: first created -> highest priority.

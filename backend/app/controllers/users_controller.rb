@@ -6,11 +6,13 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		@user = User.new(user_params)
+		@user = User.new()
+		@user.email = params[:email]
+		@user.password = params[:password]
 		if @user.save
-			redirect_to root_url, :notice => "Signed up!"
+			format.json { render :json => @user }
 		else
-			render "new", :alert => "Error Registering New User"
+			format.json { render :json => @user.errors, :status => :unprocessable_entity }
 		end
 	end
 
@@ -26,9 +28,9 @@ class UsersController < ApplicationController
 		@user = current_user
 
 		if @user.update(user_params)
-			redirect_to(user_path), :notice => "User Updated!"
+			redirect_to user_path, :notice => "User Updated!"
 		else
-			redirect_to(edit_user_path(@user.id)), :alert => "Error! User Not Updated"
+			redirect_to edit_user_path(@user.id), :alert => "Error! User Not Updated"
 		end 
 	end
 

@@ -7,6 +7,7 @@
 //
 
 #import "FLUDViewController.h"
+#import "DataClass.h"
 
 @interface FLUDViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
