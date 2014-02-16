@@ -4,7 +4,7 @@ class CreateAlerts < ActiveRecord::Migration
     	t.float :latitude
 			t.float :longitude
     	t.string :postcode, :null => false, :default => ""
-		 	t.string :type
+		 	t.string :alertType
 		  t.text :desc
 			t.integer :user_id
 

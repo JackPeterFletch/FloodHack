@@ -14,10 +14,10 @@
 ActiveRecord::Schema.define(version: 20140216122100) do
 
   create_table "alerts", force: true do |t|
+    t.string   "postcode",                            default: "", null: false
+    t.string   "alertType"
     t.float    "latitude"
     t.float    "longitude"
-    t.string   "postcode",   default: "", null: false
-    t.string   "type"
     t.text     "desc"
     t.integer  "user_id"
     t.datetime "created_at"
