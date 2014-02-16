@@ -6,7 +6,9 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		@user = User.new(user_params)
+		@user = User.new()
+		@user.email = params[:email]
+		@user.password = params[:password]
 		if @user.save
 			format.json { render :json => @user }
 		else
