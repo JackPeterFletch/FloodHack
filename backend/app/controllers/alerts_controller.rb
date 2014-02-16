@@ -36,6 +36,15 @@ class AlertsController < ApplicationController
 		end 
 	end
 
+	# Send alert to registered user via Twilio/APNS etc
+	def send
+		# Set APNS params
+		APNS.host = 'gateway.sandbox.push.apple.com'
+		APNS.pem = '/APNS/sandbox.pem'
+		APNS.port = 2195
+		
+	end
+
 	private
 
 	def alert_params
