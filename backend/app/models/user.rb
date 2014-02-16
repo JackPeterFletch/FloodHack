@@ -4,5 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+	reverse_geocoded_by :latitude, :longitude
+
 	has_many :alerts
 end

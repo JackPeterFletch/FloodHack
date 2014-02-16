@@ -1,8 +1,8 @@
 class CreateAlerts < ActiveRecord::Migration
   def change
     create_table :alerts do |t|
-    	t.decimal :lat, {:precision => 10, :scale => 6}
-			t.decimal :lng, {:precision => 10, :scale => 6}
+    	t.float :latitude
+			t.float :longitude
     	t.string :postcode, :null => false, :default => ""
 		 	t.string :alertType
 		  t.text :desc

@@ -43,11 +43,25 @@ class AlertsController < ApplicationController
 		APNS.pem = 'APNS/sandbox.pem'
 		APNS.port = 2195
 
+		# For each user within 5 miles of the alert
+		@users = User.near([alert.longitude, alert.latitude], 5)
+		@users.each do |user|
+			notification = APNS::Notification.new(user.deviceID, :alert => 'Alert near your location', :badge => 1, :sound => 'default')
+			APNS.send_notications([notification])
+		end
+
+	end
+
+	def alertTest
+		# Set APNS params
+		APNS.host = 'gateway.sandbox.push.apple.com'
+		APNS.pem = 'APNS/sandbox.pem'
+		APNS.port = 2195
 		# John's Device ID for testing
 		device_token = 'b2938ecd4d42a71fe8ece9c671e8f0cdda1292872758a09ce39e05b3f54f1dd0'
-		n1 = APNS::Notification.new(device_token, 'Hello iPhone!' )
-    n2 = APNS::Notification.new(device_token, :alert => 'Hello iPhone!', :badge => 1, :sound => 'default')
-    APNS.send_notifications([n1, n2])		
+		# Send the notification
+    n1 = APNS::Notification.new(device_token, :alert => 'Hello iPhone!', :badge => 1, :sound => 'default')
+    APNS.send_notifications([n1])		
 	end
 
 	private
