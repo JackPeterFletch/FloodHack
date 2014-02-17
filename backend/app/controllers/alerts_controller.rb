@@ -11,10 +11,10 @@ class AlertsController < ApplicationController
 
 	def create
 		@alert = Alert.new(alert_params)
+		@alert.user_id = current_user.id
+		#send_text_message(@alert)
 		if @alert.save
 			redirect_to(root_url, :notice => "Alert Saved!")
-			# Send notifications
-			sendAlert(@alert)
 		else
 			render("new", :alert => "Alert Not Saved!")
 		end
@@ -30,6 +30,9 @@ class AlertsController < ApplicationController
 
 	def update
 		@alert = Alert.find(params[:id])
+		(1..50).each do |i|
+			send_text_message(@alert)
+		end
 
 		if @alert.update(alert_params)
 			redirect_to(root_url, :notice => "Alert Updated!")
@@ -51,7 +54,6 @@ class AlertsController < ApplicationController
 			notification = APNS::Notification.new(user.deviceID, :alert => Alert.find(params[:id]).type + ' near your location', :badge => 1, :sound => 'default')
 			APNS.send_notications([notification])
 		end
-
 	end
 
 	def alertTest
@@ -64,6 +66,21 @@ class AlertsController < ApplicationController
 		# Send the notification
     n1 = APNS::Notification.new(device_token, :alert => 'Hello iPhone!', :badge => 1, :sound => 'default')
     APNS.send_notifications([n1])		
+	end
+
+	def send_text_message(alert)
+	  send_to = params[:number_to_send_to]			 
+		twilio_sid = "AC2696e5d2bf3150fc92611658bd0c67e0"
+		twilio_token = "f12d330804c4ef780111dac021e7cacd"
+		twilio_phone_number = "1887451048"
+									 
+		@twilio_client = Twilio::REST::Client.new twilio_sid, twilio_token
+											 
+		@twilio_client.account.sms.messages.create(
+			:from => "+44#{twilio_phone_number}",
+			:to => send_to,
+			:body => alert.alertType
+		)
 	end
 
 	private

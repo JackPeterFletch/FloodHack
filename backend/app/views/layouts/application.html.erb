@@ -8,6 +8,12 @@
 </head>
 <body>
 
+	<ul class="nav nav-tabs">
+		<li><a href="/">Home</a></li>
+		<li class="active"><%= link_to 'Alerts', '/alerts' %></li>
+		<li><%= link_to 'Sign Out', destroy_user_session_path %></li>
+	</ul>
+
 <%= yield %>
 
 </body>

@@ -1,15 +1,9 @@
 FloodHack::Application.routes.draw do
-	namespace :api do
-	  devise_for :users
-		resources :recipes, :only=>[:index, :show]
-	end  
-
 	devise_for :users
-
+	
 	resources :users
 	resources :alerts
 
-  match 'users/:email/:password' => 'users#create' => :via :post
   match 'alerttest' => 'alerts#alertTest', :via => :get
 
   # The priority is based upon order of creation: first created -> highest priority.

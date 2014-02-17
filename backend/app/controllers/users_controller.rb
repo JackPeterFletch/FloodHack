@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-	#skip_before_filter :autheticate_user!, :only => [:new, :create]
+	skip_before_filter :autheticate_user!, :only => [:new, :create]
 
 	def new
 	  @user = User.new
@@ -9,11 +9,6 @@ class UsersController < ApplicationController
 		@user = User.new()
 		@user.email = params[:email]
 		@user.password = params[:password]
-		if @user.save
-			format.json { render :json => @user }
-		else
-			format.json { render :json => @user.errors, :status => :unprocessable_entity }
-		end
 	end
 
 	def show
@@ -33,10 +28,6 @@ class UsersController < ApplicationController
 			redirect_to edit_user_path(@user.id), :alert => "Error! User Not Updated"
 		end 
 	end
-
-#	def admin
-#		render "admin"
-#	end
 
 	private
 
