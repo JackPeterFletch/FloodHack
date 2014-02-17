@@ -164,7 +164,7 @@ DEPENDENCIES
   geocoder
   jbuilder (>= 1.2)
   jquery-rails
-  rails (>= 4.0.2)
+  rails (~> 4.0.2)
   sass-rails (>= 4.0.0)
   sdoc
   sqlite3

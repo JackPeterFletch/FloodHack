@@ -7,7 +7,6 @@
 			<tr>
 				<th>Type</th>
 				<th>Description</th>
-				<th></th>
 			</tr>
 		</thead>
 
@@ -16,10 +15,6 @@
 				<tr>
 					<td><b><%= alert.alertType %></b></td>
 					<td><%= alert.desc %></td>
-					<td>
-						<%= link_to 'Edit', edit_alert_path(alert), :class => "btn btn-default btn-md" %>
-						<%= link_to 'Delete', alert, :method => :delete, :class => "btn btn-danger btn-md", :confirm => "Delete Alert: Are you sure" %>
-					</td>
 				</tr>
 			<% end %>
 		</tbody>

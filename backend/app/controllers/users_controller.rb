@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-	skip_before_filter :autheticate_user!, :only => [:new, :create]
+	before_filter :authenticate_user!, :except => [:new, :create]
 
 	def new
 	  @user = User.new
@@ -12,7 +12,8 @@ class UsersController < ApplicationController
 	end
 
 	def show
-		@user = !params[:id].nil? ? User.find(params[:id]) : current_user
+		@user = current_user
+		@alerts = @user.alerts
 	end
 
 	def edit
