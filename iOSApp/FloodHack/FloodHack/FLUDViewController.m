@@ -33,10 +33,10 @@
 - (IBAction)login:(id)sender {
     
     //Set Login URL
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://10.100.84.171:3000/users/sign_in.json"]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://10.100.84.171:3000/api/users/sign_in.json"]];
     
     //Set Json Data
-    NSString *dataJson = [NSString stringWithFormat:@"{user[email]:%@, user[password]:%@,user[remember_me]:0,commit:Sign in}",_usernameField.text, _passwordField.text];
+    NSString *dataJson = [NSString stringWithFormat:@"{\"user[email]\": \"%@\",\"user[password]\": \"%@\",\"remember_me\": 0,\"commit\": \"Signin\"}",_usernameField.text, _passwordField.text];
     NSData* postData= [dataJson dataUsingEncoding:NSUTF8StringEncoding];
     
     //Create URL Request
@@ -46,8 +46,30 @@
     [urlRequest setValue:@"application/x-www-form-urlencoded charset=utf-8" forHTTPHeaderField:@"Content-Type"];
     [urlRequest setHTTPBody:postData];
     
+    NSLog(dataJson);
+    
     //Perform Request
     NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
+}
+- (IBAction)signup:(id)sender {
+    //Set Login URL
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://10.100.84.171:3000/users/%@/%@.json",_usernameField.text, _passwordField.text]];
+    
+    //Set Json Data
+    NSString *dataJson = [NSString stringWithFormat:@"{\"user\":{\"email\": \"%@\",\"password\": \"%@\",\"remember_me\": 0,\"commit\": \"Signin\"}}",_usernameField.text, _passwordField.text];
+    NSLog(dataJson);
+    //NSError *error;
+    //NSData* postData= [NSJSONSerialization  dataWithJSONObject:dataJson options:0 error:&error];
+    //Create URL Request
+    NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+    [urlRequest setHTTPMethod:@"POST"];
+    //[urlRequest setValue:[NSString stringWithFormat:@"%d", postData.length] forHTTPHeaderField:@"Content-Length"];
+    //[urlRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    //[urlRequest setHTTPBody:postData];
+        
+    //Perform Request
+    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
+
 }
 
 //Delegate methods for NSURLConnection
