@@ -2,21 +2,28 @@
 	<div class="panel-heading">
 		<%= link_to 'Post Alert', new_alert_path, :class => "btn btn-success btn-md" %>
 	</div>
-	<table class="table">
-		<thead>
-			<tr>
-				<th>Type</th>
-				<th>Description</th>
-			</tr>
-		</thead>
-
-		<tbody>
-			<% @alerts.each do |alert| %>
+	<div class="table-responsive">
+		<table class="table table-bordered table-striped">
+			<thead>
 				<tr>
-					<td><b><%= alert.alertType %></b></td>
-					<td><%= alert.desc %></td>
+					<th>Type</th>
+					<th>Description</th>
+					<th></th>
 				</tr>
-			<% end %>
-		</tbody>
-	</table>
+			</thead>
+
+			<tbody>
+				<% @alerts.each do |alert| %>
+					<tr>
+						<td><%= alert.alertType %></td>
+						<td><%= alert.desc %></td>
+						<td>
+							<%= link_to 'Edit', edit_alert_path(alert), :class => "btn btn-default btn-md" %>
+							<%= link_to 'Delete', alert, :method => :delete, :class => "btn btn-danger btn-md", :confirm => "Delete Alert: Are you sure" %>
+						</td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
 </div>

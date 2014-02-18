@@ -28,11 +28,15 @@ class AlertsController < ApplicationController
 		@alert = Alert.find(params[:id])
 	end
 
+	def destroy
+		Alert.find(params[:id]).destroy
+
+		redirect_to alerts_path
+	end
+
 	def update
 		@alert = Alert.find(params[:id])
-		(1..50).each do |i|
-			send_text_message(@alert)
-		end
+		#send_text_message(@alert)
 
 		if @alert.update(alert_params)
 			redirect_to(root_url, :notice => "Alert Updated!")
