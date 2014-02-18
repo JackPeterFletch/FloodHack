@@ -5,21 +5,28 @@
 	<div class="table-responsive">
 		<table class="table table-bordered table-striped">
 			<thead>
-				<tr>
-					<th>Type</th>
-					<th>Description</th>
-					<th></th>
+				<tr class="row">
+					<th class="col-xs-3 col-sm-3 col-md-3 col-lg-3 centerText">Type</th>
+					<th class="col-xs-7 col-sm-7 col-md-7 col-lg-7 centerText">Description</th>
+					<th class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></th>
+					<th class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></th>
 				</tr>
 			</thead>
 
 			<tbody>
 				<% @alerts.each do |alert| %>
-					<tr>
+					<tr class="row">
 						<td><%= alert.alertType %></td>
 						<td><%= alert.desc %></td>
 						<td>
-							<%= link_to 'Edit', edit_alert_path(alert), :class => "btn btn-default btn-md" %>
-							<%= link_to 'Delete', alert, :method => :delete, :class => "btn btn-danger btn-md", :confirm => "Delete Alert: Are you sure" %>
+							<div class="centerText">
+								<%= link_to 'Edit', edit_alert_path(alert), :class => "btn btn-default btn-md" %>
+							</div>
+						</td>
+						<td>	
+							<div class="centerText">
+								<%= link_to 'Delete', alert, :method => :delete, :class => "btn btn-danger btn-md", :confirm => "Delete Alert: Are you sure?" %>
+							</div>
 						</td>
 					</tr>
 				<% end %>

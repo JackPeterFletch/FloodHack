@@ -12,6 +12,35 @@
  */
 
 @import 'bootstrap';
-@import 'bootstrap/theme';
+//@import 'bootstrap/theme';
 
+.centerText{
+	text-align:center;
+}
 
+body{
+	font-size:16px;
+}
+
+.btn{
+	font-size:16px;
+}
+
+h1{
+	margin-top:0px;
+	margin-bottom:15px;
+}
+
+h2{
+	margin-top:0px;
+	margin-bottom:15px;
+}
+.container-fluid{
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+td{
+	line-height:40px !important;
+	vertical-align:center !important;
+}

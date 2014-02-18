@@ -1,20 +1,23 @@
 FloodHack::Application.routes.draw do
 	devise_for :users
-	
+
+	authenticated do
+	  root :to => 'users#show', as: :authenticated
+	end
+
 	devise_scope :user do
-		get 'logout' => 'devise/sessions#destroy'
+		get 'log_out' => 'devise/sessions#destroy'
+		get 'log_in' => 'devise/sessions#new'
+  	root to: 'devise/sessions#new'
 	end
 
 	resources :users
 	resources :alerts
 
-  match 'alerttest' => 'alerts#alertTest', :via => :get
+  get 'alerttest' => 'alerts#alertTest'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
-  root 'users#show'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

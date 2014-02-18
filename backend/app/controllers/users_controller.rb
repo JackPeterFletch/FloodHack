@@ -9,6 +9,9 @@ class UsersController < ApplicationController
 		@user = User.new()
 		@user.email = params[:email]
 		@user.password = params[:password]
+		@user.mobile = params[:mobile]
+		@user.landline = params[:landline]
+		@user.postcode = params[:postcode]
 	end
 
 	def show

@@ -12,11 +12,10 @@ class AlertsController < ApplicationController
 	def create
 		@alert = Alert.new(alert_params)
 		@alert.user_id = current_user.id
-		#send_text_message(@alert)
 		if @alert.save
-			redirect_to(root_url, :notice => "Alert Saved!")
+			redirect_to(alerts_path, :notice => "Alert Saved!")
 		else
-			render("new", :alert => "Alert Not Saved!")
+			render 'new', :alert => "Error! Alert Not Saved!"
 		end
 	end
 
@@ -29,7 +28,8 @@ class AlertsController < ApplicationController
 	end
 
 	def destroy
-		Alert.find(params[:id]).destroy
+		@alert = Alert.find(params[:id])
+		@alert.destroy
 
 		redirect_to alerts_path
 	end
@@ -37,11 +37,10 @@ class AlertsController < ApplicationController
 	def update
 		@alert = Alert.find(params[:id])
 		#send_text_message(@alert)
-
 		if @alert.update(alert_params)
-			redirect_to(root_url, :notice => "Alert Updated!")
+			redirect_to(alerts_path, :notice => "Alert Updated!")
 		else
-			redirect_to(edit_alert_path(@alert.id), :alert => "Error! Alert Not Updated!")
+			render 'edit', :alert => "Error! Alert Not Updated!"
 		end 
 	end
 
@@ -90,7 +89,7 @@ class AlertsController < ApplicationController
 	private
 
 	def alert_params
-		params.require(:alert).permit(:id, :lat, :lng, :postcode, :alertType, :desc, :user_id, :created_at, :updated_at)
+		params.require(:alert).permit(:id, :latitude, :longitude, :postcode, :alertType, :desc, :user_id, :created_at, :updated_at)
 	end
 
 end
