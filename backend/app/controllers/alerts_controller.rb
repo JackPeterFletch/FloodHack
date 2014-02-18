@@ -7,6 +7,11 @@ class AlertsController < ApplicationController
 
 	def index
 	  @alerts = Alert.all
+
+		respond_to do |format|
+			format.html
+			format.json { render :json => @alerts }
+		end
 	end
 
 	def create

@@ -6,18 +6,17 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		@user = User.new()
-		@user.email = params[:email]
-		@user.password = params[:password]
-		@user.mobile = params[:mobile]
-		@user.landline = params[:landline]
-		@user.postcode = params[:postcode]
-		@user.house_number = params[:house_number]
+		@user = User.new(user_params) 
 	end
 
 	def show
 		@user = current_user
 		@alerts = @user.alerts
+
+		respond_to do |format|
+			format.html
+			format.json { render :json => @user, :include => :alerts }
+		end
 	end
 
 	def edit
