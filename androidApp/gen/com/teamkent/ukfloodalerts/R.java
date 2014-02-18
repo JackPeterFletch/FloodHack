@@ -180,14 +180,12 @@ containing a value of this type.
         public static final int common_signin_btn_text_light=0x7f04000b;
     }
     public static final class dimen {
-        /**  Default screen margins, per the Android Design guidelines. 
-
+        /** 
          Customize dimensions originally defined in res/values/dimens.xml (such as
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
         public static final int activity_horizontal_margin=0x7f080000;
-        public static final int activity_vertical_margin=0x7f080001;
     }
     public static final class drawable {
         public static final int common_signin_btn_icon_dark=0x7f020000;
@@ -219,20 +217,43 @@ containing a value of this type.
         public static final int ic_plusone_small_off_client=0x7f02001a;
         public static final int ic_plusone_standard_off_client=0x7f02001b;
         public static final int ic_plusone_tall_off_client=0x7f02001c;
+        public static final int logo=0x7f02001d;
+        public static final int uni_logo=0x7f02001e;
     }
     public static final class id {
-        public static final int action_settings=0x7f050005;
+        public static final int RadioButton01=0x7f05000e;
+        public static final int RadioButton02=0x7f050014;
+        public static final int RadioButton03=0x7f05000f;
+        public static final int RadioButton04=0x7f050010;
+        public static final int RadioButton05=0x7f050011;
+        public static final int RadioButton06=0x7f050012;
+        public static final int action_settings=0x7f050015;
+        public static final int button1=0x7f050005;
+        public static final int button2=0x7f050006;
+        public static final int button3=0x7f050007;
         public static final int hybrid=0x7f050004;
+        public static final int imageView1=0x7f050008;
+        public static final int imageView2=0x7f05000b;
         public static final int none=0x7f050000;
         public static final int normal=0x7f050001;
+        public static final int radioAlert=0x7f05000d;
+        public static final int radioButton1=0x7f050013;
+        public static final int radioalertgroup=0x7f05000c;
         public static final int satellite=0x7f050002;
         public static final int terrain=0x7f050003;
+        public static final int textView1=0x7f05000a;
+        public static final int webView1=0x7f050009;
     }
     public static final class integer {
         public static final int google_play_services_version=0x7f070000;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
+        public static final int main_menu=0x7f030000;
+        public static final int map_view_tab=0x7f030001;
+        public static final int register_page=0x7f030002;
+        public static final int splash=0x7f030003;
+        public static final int submit_alert=0x7f030004;
+        public static final int view_alerts=0x7f030005;
     }
     public static final class menu {
         public static final int main=0x7f0a0000;
