@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/radioalertgroup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="27dp"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="92dp"
+        android:text="Submit an Alert"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <RadioGroup
+        android:id="@+id/radioAlert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button1"
+        android:layout_alignRight="@+id/textView1"
+        android:gravity="center" >
+
+    </RadioGroup>
+
+    <RadioButton
+        android:id="@+id/RadioButton01"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Road Closure" />
+
+    <RadioButton
+        android:id="@+id/RadioButton03"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/RadioButton01"
+        android:layout_below="@+id/RadioButton01"
+        android:text="Flooded Banks" />
+
+    <RadioButton
+        android:id="@+id/RadioButton04"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/RadioButton03"
+        android:layout_below="@+id/RadioButton03"
+        android:text="Stranded People" />
+
+    <RadioButton
+        android:id="@+id/RadioButton05"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/RadioButton04"
+        android:layout_below="@+id/RadioButton04"
+        android:text="Stranded animals" />
+
+    <RadioButton
+        android:id="@+id/RadioButton06"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/RadioButton05"
+        android:layout_below="@+id/RadioButton05"
+        android:text="Water receeded" />
+
+    <RadioButton
+        android:id="@+id/radioButton1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/RadioButton06"
+        android:layout_below="@+id/RadioButton06"
+        android:text="Power Outage" />
+
+    <RadioButton
+        android:id="@+id/RadioButton02"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/radioButton1"
+        android:layout_below="@+id/radioButton1"
+        android:text="Car Crash" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RadioButton02"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:text="Submit" />
+
+</RelativeLayout>
