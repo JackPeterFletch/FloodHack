@@ -12,6 +12,7 @@ class UsersController < ApplicationController
 		@user.mobile = params[:mobile]
 		@user.landline = params[:landline]
 		@user.postcode = params[:postcode]
+		@user.house_number = params[:house_number]
 	end
 
 	def show
@@ -36,7 +37,7 @@ class UsersController < ApplicationController
 	private
 
 	def user_params
-		params.require(:user).permit(:firstName, :lastName, :lat, :lng, :postcode, :phone, :deviceID, :mobile)
+		params.require(:user).permit(:firstName, :lastName, :lat, :lng, :postcode, :phone, :deviceID, :mobile, :house_number)
 	end
 
 end

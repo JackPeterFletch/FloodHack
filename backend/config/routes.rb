@@ -8,6 +8,7 @@ FloodHack::Application.routes.draw do
 	devise_scope :user do
 		get 'log_out' => 'devise/sessions#destroy'
 		get 'log_in' => 'devise/sessions#new'
+		get 'edit_account' => 'devise/registrations#edit'
   	root to: 'devise/sessions#new'
 	end
 
