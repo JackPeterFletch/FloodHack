@@ -2,7 +2,7 @@ FloodHack::Application.routes.draw do
 	devise_for :users, :controllers => { :sessions => "sessions", :registrations => "registrations" }
 
 	authenticated do
-	  root :to => 'users#show', as: :authenticated
+	  root :to => 'alerts#index', as: :authenticated
 	end
 
 	devise_scope :user do
@@ -16,6 +16,8 @@ FloodHack::Application.routes.draw do
 	resources :alerts
 
   get 'alerttest' => 'alerts#alertTest'
+	get '/local' => 'alerts#index'
+	get '/posted_alerts' => 'users#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
