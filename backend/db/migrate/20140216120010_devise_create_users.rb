@@ -12,6 +12,9 @@ class DeviseCreateUsers < ActiveRecord::Migration
 			t.string :mobile
 			t.integer :house_number
 
+			## Auth Token
+			t.string :auth_token
+
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
@@ -43,6 +46,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
 
     add_index :users, :email,                :unique => true
     add_index :users, :reset_password_token, :unique => true
+    add_index :users, :auth_token,   :unique => true
     # add_index :users, :confirmation_token,   :unique => true
     # add_index :users, :unlock_token,         :unique => true
   end

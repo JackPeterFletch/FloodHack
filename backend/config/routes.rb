@@ -1,5 +1,5 @@
 FloodHack::Application.routes.draw do
-	devise_for :users, :controllers => { :registrations => "registrations" }
+	devise_for :users, :controllers => { :sessions => "sessions", :registrations => "registrations" }
 
 	authenticated do
 	  root :to => 'users#show', as: :authenticated

@@ -42,17 +42,32 @@ h2{
 
 #logo{
 	width:45px;
+	display:block;
+	position:absolute;
+	margin-top:3px;
+}
+
+.navbar-header {
+	margin: 0px !important;
 }
 
 .container-fluid{
 	padding-left: 5%;
 	padding-right: 5%;
-	padding-top:2px;
+	padding-top:10px;
 }
 
 td{
 	line-height:40px !important;
 	vertical-align:center !important;
+}
+
+ul.nav.navbar-nav li a{
+	font-size: 16px;
+	padding: 10px;
+	margin-top:5px;
+	transition: color 0.2s, background-color 0.2s;
+	-webkit-transition: color 0.2s, background-color 0.2s;
 }
 
 ul.nav.navbar-nav li a:hover{
@@ -61,17 +76,13 @@ ul.nav.navbar-nav li a:hover{
 	border-radius: 3px;
 }
 
-ul.nav.navbar-nav li a{
+ul.nav.navbar-nav li a:active{
+	background-color: #40D7FF;
+	color: #FFFFFF;
+	border-radius: 3px;
+}
+
+.navbar-brand{
 	font-size: 16px;
-	margin: 10px 0px 10px 0px;
-	padding: 12px;
-}
-.navbar a{
-	margin: 5px 0px 10px 0px;
-	padding:5px;
-	font-size: 20px;
-}
-.navbar button{
-	margin-top: 15px;
-	margin-bottom: 17px;
+	margin-left: 30px !important;
 }

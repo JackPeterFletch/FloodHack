@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20140216122100) do
     t.string   "deviceID"
     t.string   "mobile"
     t.integer  "house_number"
+    t.string   "auth_token"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -46,6 +47,7 @@ ActiveRecord::Schema.define(version: 20140216122100) do
     t.datetime "updated_at"
   end
 
+  add_index "users", ["auth_token"], name: "index_users_on_auth_token", unique: true
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
