@@ -6,9 +6,7 @@ class User < ActiveRecord::Base
 
 	has_many :alerts
 
-	#geocoded_by :
-	#reverse_geocoded_by :latitude, :longitude
-	#after_validation :geocode, :reverse_geocode
+	acts_as_mappable :lat_column_name => :lat, :lng_column_name => :lon
 
 	# before callback set up for the token.
 	before_save :ensure_auth_token

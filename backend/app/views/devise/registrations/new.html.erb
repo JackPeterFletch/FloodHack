@@ -8,6 +8,11 @@
 	<% end %>
 
 	<div class="form-group">
+  	<%= f.label "Alert radius (Miles)" %>
+  	<%= f.number_field :alert_radius, :class =>"form-control" %>
+	</div>
+
+	<div class="form-group">
 		<%= f.label :mobile %>
 		<%= f.text_field :mobile, :class =>"form-control" %>
 	</div>

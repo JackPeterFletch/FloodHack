@@ -5,11 +5,12 @@ class AlertsController < ApplicationController
 	end
 
 	def index
-	  @alerts = Alert.all
+		#@alerts = Alert.within(5, :origin => [current_user.lat, current_user.lon])
+		@alerts = Alert.all
 
 		respond_to do |format|
 			format.html
-			format.json { render :json => @alerts }
+			format.json { render :json => {"alerts" => @alerts}, :except => [:id, :user_id, :created_at, :updated_at, :address] }
 		end
 	end
 
@@ -61,7 +62,7 @@ class AlertsController < ApplicationController
 		APNS.port = 2195
 
 		# For each user within 5 miles of the alert
-		@users = User.near([alert.longitude, alert.latitude], 5)
+		@users = User.near([alert.lon, alert.lat], 5)
 		@users.each do |user|
 			notification = APNS::Notification.new(user.deviceID, :alert => Alert.find(params[:id]).type + ' near your location', :badge => 1, :sound => 'default')
 			APNS.send_notications([notification])
@@ -98,7 +99,7 @@ class AlertsController < ApplicationController
 	private
 
 	def alert_params
-		params.require(:alert).permit(:id, :latitude, :longitude, :postcode, :alertType, :desc, :user_id, :created_at, :updated_at)
+		params.require(:alert).permit(:id, :lat, :lon, :address, :postcode, :alertType, :desc, :user_id, :created_at, :updated_at)
 	end
 
 end
