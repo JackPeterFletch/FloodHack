@@ -33,12 +33,11 @@
 - (IBAction)login:(id)sender {
     
     //Set Login URL
-    //NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://192.168.1.4:3000/users/sign_in.json?user[email]=jackfletcher2010@googlemail.com&user[password]=twattwat"]];
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://192.168.1.4:3000/users/sign_in.json"]];
     
     //Set Json Data
     NSString *dataJson = [NSString stringWithFormat:@"{\"user\":{\"email\": \"%@\",\"password\": \"%@\",\"remember_me\": 0},\"commit\": \"Log In\"}",_usernameField.text, _passwordField.text];
-    //NSString *dataJson = [NSString stringWithFormat:@"{\"email\": \"%@\",\"password\": \"%@\",\"remember_me\": 0,\"commit\": \"Log In\"}",_usernameField.text, _passwordField.text];
+
     NSData* postData= [dataJson dataUsingEncoding:NSUTF8StringEncoding];
     
     //Create URL Request

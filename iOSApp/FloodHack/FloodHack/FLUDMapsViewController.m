@@ -14,6 +14,10 @@
 @property (weak, nonatomic) IBOutlet MKMapView *CrowdMap;
 @property (weak, nonatomic) IBOutlet UIWebView *WebMap;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *MapChooser;
+@property (strong, nonatomic) NSMutableData *responseData;
+
+@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) CLLocation *currentLocation;
 
 @end
 
@@ -37,10 +41,11 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [_WebMap setScalesPageToFit:YES];
     [_WebMap loadRequest:request];
-    //_CrowdMap.delegate = self;
+    _theView.delegate = self;
     
     _CrowdMap.showsUserLocation = true;
     _CrowdMap.userTrackingMode = MKUserTrackingModeFollow;
+    _CrowdMap.delegate = self;
 	// Do any additional setup after loading the view.
     
     //Set event when SegControl hit
@@ -51,6 +56,48 @@
     [_MapChooser setSelectedSegmentIndex:1];
     
 }
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:YES];
+    [_CrowdMap removeOverlays:_CrowdMap.overlays];
+    
+    NSMutableArray * annotationsToRemove = [ _CrowdMap.annotations mutableCopy ];
+    [ annotationsToRemove removeObject:_CrowdMap.userLocation ];
+    [ _CrowdMap removeAnnotations:annotationsToRemove ];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    _CrowdMap.delegate = self;
+    
+    _CrowdMap.showsUserLocation = true;
+    _CrowdMap.userTrackingMode = MKUserTrackingModeFollow;
+	// Do any additional setup after loading the view.
+    
+    NSString *authToken = [[NSUserDefaults standardUserDefaults] stringForKey:@"authKey"];
+
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://192.168.1.4:3000/alerts.json?auth_token=%@", authToken]];
+    
+    //Set Json Data
+    NSString *dataJson = [NSString stringWithFormat:@"{\"auth_token\": \"%@\"}", authToken];
+    NSData* postData= [dataJson dataUsingEncoding:NSUTF8StringEncoding];
+    
+    //Create URL Request
+    NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+    [urlRequest setHTTPMethod:@"GET"];
+    //[urlRequest setValue:[NSString stringWithFormat:@"%d", postData.length] forHTTPHeaderField:@"Content-Length"];
+    //[urlRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    //[urlRequest setHTTPBody:postData];
+    
+    NSLog(dataJson);
+    
+    //Perform Request
+    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
+    
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -72,5 +119,67 @@
         [_WebMap setHidden:YES];
     }
 }
+
+//Delegate methods for NSURLConnection
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
+    self.responseData = [NSMutableData data];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+    [self.responseData appendData:data];
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    NSLog(@"response data - %@", [[NSString alloc] initWithData:self.responseData encoding:NSUTF8StringEncoding]);
+    
+    NSError *error;
+    NSDictionary *jsonResultSet = (NSDictionary*)[NSJSONSerialization JSONObjectWithData:_responseData options:kNilOptions error:&error];
+    NSLog(@"Got here");
+    
+    NSArray *fetchedArr = [jsonResultSet objectForKey:@"alerts"];
+    
+    for (NSDictionary *alert in fetchedArr){
+        NSNumber *latitude = [alert objectForKey:@"lat"];
+        NSNumber *longitude = [alert objectForKey:@"lon"];
+        NSString *alertType = [alert objectForKey:@"alertType"];
+        NSString *desc = [alert objectForKey:@"desc"];
+        
+        CLLocationDegrees CLlongitude = (CLLocationDegrees)[longitude doubleValue];
+        CLLocationDegrees CLlatitude = (CLLocationDegrees)[latitude doubleValue];
+        
+        CLLocation *coordinate = [[CLLocation alloc] initWithLatitude:CLlatitude longitude:CLlongitude];
+        
+        MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+        point.coordinate = coordinate.coordinate;
+        point.title = alertType;
+        point.subtitle = desc;
+        
+        [_CrowdMap addAnnotation:point];
+    }
+    
+    //} else {
+    //    NSLog(@"Submit fucking failed");
+    //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert retreival failed" message:@"Do you have network connectivity?" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    //    [alert show];
+    //}
+}
+
+//Delegate for Map
+- (void)mapView:(MKMapView *)aMapView didUpdateUserLocation:(MKUserLocation *)aUserLocation {
+    MKCoordinateRegion region;
+    MKCoordinateSpan span;
+    span.latitudeDelta = 0.005;
+    span.longitudeDelta = 0.005;
+    CLLocationCoordinate2D location;
+    location.latitude = aUserLocation.coordinate.latitude;
+    location.longitude = aUserLocation.coordinate.longitude;
+    region.span = span;
+    region.center = location;
+    [aMapView setRegion:region animated:YES];
+}
+
 
 @end

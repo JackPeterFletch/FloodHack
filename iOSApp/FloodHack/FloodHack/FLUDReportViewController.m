@@ -51,6 +51,9 @@
     
     self.pickerElements = @[@"Burst River Bank", @"Power Down", @"Flooded Road", @"Trapped Person", @"Other"];
     self.incidentText = [self.pickerElements objectAtIndex:0];
+    
+    _loadingSpinner.hidden = YES;
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,13 +67,13 @@
     NSString *authToken = [[NSUserDefaults standardUserDefaults] stringForKey:@"authKey"];
     
     NSMutableString *longitude = [[NSMutableString alloc] initWithFormat:@"%f", currentLocation.coordinate.longitude];
-    [longitude setString: [longitude stringByReplacingOccurrencesOfString:@"." withString:@"P"]];
+    //[longitude setString: [longitude stringByReplacingOccurrencesOfString:@"." withString:@"P"]];
     
     NSMutableString *latitude =[[NSMutableString alloc] initWithFormat:@"%f", currentLocation.coordinate.latitude];
-    [latitude setString: [latitude stringByReplacingOccurrencesOfString:@"." withString:@"P"]];
+    //[latitude setString: [latitude stringByReplacingOccurrencesOfString:@"." withString:@"P"]];
     
     //Set Json Data
-    NSString *dataJson = [NSString stringWithFormat:@"{\"alert\":{\"alertType\": \"%@\",\"desc\": \"%@\",\"latitude\": \"%@\",\"longitude\": \"%@\"},\"commit\": \"Create Alert\",\"auth_token\": \"%@\"}",_incidentText, _decriptionField.text, longitude, latitude, authToken];
+    NSString *dataJson = [NSString stringWithFormat:@"{\"alert\":{\"alertType\": \"%@\",\"desc\": \"%@\",\"lat\": \"%@\",\"lon\": \"%@\"},\"commit\": \"Create Alert\",\"auth_token\": \"%@\"}",_incidentText, _decriptionField.text, latitude, longitude, authToken];
     NSData* postData= [dataJson dataUsingEncoding:NSUTF8StringEncoding];
     
     //Create URL Request
@@ -83,6 +86,7 @@
     NSLog(dataJson);
     
     [_loadingSpinner startAnimating];
+    _loadingSpinner.hidden = NO;
     
     //Perform Request
     NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
@@ -133,6 +137,7 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
+    _loadingSpinner.hidden = YES;
     [_loadingSpinner stopAnimating];
     
     NSLog(@"response data - %@", [[NSString alloc] initWithData:self.responseData encoding:NSUTF8StringEncoding]);
@@ -143,12 +148,13 @@
     if ([[jsonResultSet objectForKey:@"success"] boolValue]){
         
         NSLog(@"Submit Fucking succeeded");
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Thanks" message:@"Thanks for your report, we will alert those nearby!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+        _decriptionField.text = @"";
         
     } else {
         NSLog(@"Submit fucking failed");
     }
 }
-
-
 
 @end
