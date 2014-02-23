@@ -46,7 +46,7 @@ GooglePlayServicesClient.OnConnectionFailedListener {
 		super.onCreate(savedInstanceState);
 		mLocationClient = new LocationClient(this, this, this);
 		geoloc = new Geocoder(getBaseContext());
-		setContentView(R.layout.main_menu);
+		setContentView(R.layout.main_view);
 		/*
 		String url ="http://eafa.shoothill.com/Home/BBC/86AD0194-A30F-4434-8C5D-FE7C0ED486D7";
 		WebView wv=(WebView) findViewById(R.id.webView1);
@@ -67,13 +67,6 @@ GooglePlayServicesClient.OnConnectionFailedListener {
 		wv2.loadUrl(url2);
 		 */
 
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
 	}
 
 	/*

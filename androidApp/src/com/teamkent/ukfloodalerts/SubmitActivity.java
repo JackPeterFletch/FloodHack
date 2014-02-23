@@ -10,6 +10,6 @@ public class SubmitActivity extends Activity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.submit_alert);
+		setContentView(R.layout.submit_view);
 	}
 }

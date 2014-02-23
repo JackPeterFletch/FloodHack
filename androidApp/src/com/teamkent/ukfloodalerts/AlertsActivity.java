@@ -13,9 +13,9 @@ public class AlertsActivity extends Activity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.view_alerts);
+		setContentView(R.layout.alert_view);
 
-		String url ="http://10.100.84.171:3000";
+		String url ="http://192.168.1.4:3000";
 		WebView wv=(WebView) findViewById(R.id.webView1);
 		wv.getSettings().setJavaScriptEnabled(true);
 		wv.getSettings().setPluginState(PluginState.ON);

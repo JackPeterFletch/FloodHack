@@ -5,98 +5,87 @@
     android:layout_height="match_parent" >
 
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/submit_logo_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView1"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="27dp"
+        android:contentDescription="@string/logo_accessibility"
         android:src="@drawable/ic_launcher" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/submit_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="92dp"
-        android:text="Submit an Alert"
+        android:text="@string/submit_title"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <RadioGroup
         android:id="@+id/radioAlert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button1"
-        android:layout_alignRight="@+id/textView1"
         android:gravity="center" >
-
     </RadioGroup>
 
     <RadioButton
-        android:id="@+id/RadioButton01"
+        android:id="@+id/submit_road"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="Road Closure" />
+        android:text="@string/submit_road_closure" />
 
     <RadioButton
-        android:id="@+id/RadioButton03"
+        android:id="@+id/submit_flood_banks"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/RadioButton01"
-        android:layout_below="@+id/RadioButton01"
-        android:text="Flooded Banks" />
+        android:text="@string/submit_flooded_banks" />
 
     <RadioButton
-        android:id="@+id/RadioButton04"
+        android:id="@+id/submit_stranded_people"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/RadioButton03"
-        android:layout_below="@+id/RadioButton03"
-        android:text="Stranded People" />
+        android:text="@string/submit_stranded_people" />
 
     <RadioButton
-        android:id="@+id/RadioButton05"
+        android:id="@+id/submit_stranded_animals"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/RadioButton04"
-        android:layout_below="@+id/RadioButton04"
-        android:text="Stranded animals" />
+        android:text="@string/submit_stranded_animals" />
 
     <RadioButton
-        android:id="@+id/RadioButton06"
+        android:id="@+id/submit_water_receed"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/RadioButton05"
-        android:layout_below="@+id/RadioButton05"
-        android:text="Water receeded" />
+        android:text="@string/submit_water_receeded" />
 
     <RadioButton
-        android:id="@+id/radioButton1"
+        android:id="@+id/submit_power"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/RadioButton06"
-        android:layout_below="@+id/RadioButton06"
-        android:text="Power Outage" />
+        android:text="@string/submit_power_outage" />
 
     <RadioButton
-        android:id="@+id/RadioButton02"
+        android:id="@+id/submit_crash"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/radioButton1"
-        android:layout_below="@+id/radioButton1"
-        android:text="Car Crash" />
+        android:text="@string/submit_car_crash" />
+
+    <RadioButton
+        android:id="@+id/submit_other"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/submit_other" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/submit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/RadioButton02"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="36dp"
-        android:text="Submit" />
+        android:text="@string/submit_button" />
 
 </RelativeLayout>
