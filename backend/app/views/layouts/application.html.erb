@@ -22,13 +22,13 @@
 						</button>
 					<% end %>
 					<%= image_tag 'logo.png', :id =>"logo" %>
-					<a class="navbar-brand" href="local"><strong>UKFloodAlerts</strong></a>
+					<strong><%= link_to 'UKFloodAlerts', 'local', :class =>'navbar-brand' %></strong>
 				</div>
 
 				<% if user_signed_in? %>
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav">
-							<li><%= link_to 'Local Alerts', 'local' %> </li>
+							<li><%= link_to 'Local Alerts', 'local' %></li>
 							<li><%= link_to 'Alerts You\'ve Posted', 'posted_alerts' %></li>
 							<li><%= link_to 'Edit Account', 'edit_account' %></li>
 							<li><%= link_to 'Sign Out', 'log_out' %></li>
