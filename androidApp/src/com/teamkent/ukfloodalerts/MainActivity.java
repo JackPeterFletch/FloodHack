@@ -15,13 +15,17 @@ import android.location.Location;
 import android.os.Bundle;
 import android.os.Handler;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
+import android.text.method.LinkMovementMethod;
 import android.view.Menu;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.webkit.WebSettings.PluginState;
+import android.widget.TextView;
 
 public class MainActivity extends Activity implements
 LocationListener,
@@ -38,8 +42,6 @@ GooglePlayServicesClient.OnConnectionFailedListener {
 	Geocoder geoloc;
 
 	private final static int CONNECTION_FAILURE_RESOLUTION_REQUEST = 9000;
-
-	private static int SPLASH_TIME_OUT = 2000;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -220,6 +222,34 @@ GooglePlayServicesClient.OnConnectionFailedListener {
 	public void viewalerts(View view){
 		Intent i = new Intent(this, AlertsActivity.class);
 		startActivity(i);
+	}
+
+	public void showAuth(View view){
+		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+				this);
+
+		// set title
+		alertDialogBuilder.setTitle(R.string.app_read_name);
+
+		// set dialog message
+		alertDialogBuilder
+		.setMessage(R.string.auth_about)
+		.setCancelable(true)
+
+		.setNeutralButton(R.string.auth_thanks,new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog,int id) {
+				// if this button is clicked, just close
+				// the dialog box and do nothing
+				dialog.cancel();
+			}
+		});
+
+		// create alert dialog
+		AlertDialog alertDialog = alertDialogBuilder.create();
+
+		// show it
+		alertDialog.show();
+		((TextView)alertDialog.findViewById(android.R.id.message)).setMovementMethod(LinkMovementMethod.getInstance());
 	}
 
 }

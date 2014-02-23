@@ -3,7 +3,7 @@
 
     <!-- GENERIC -->
     <string name="app_name">UKFloodAlerts</string>
-    <string name="app_read_name">UKFloodAlerts</string>
+    <string name="app_read_name">UK Flood Alerts</string>
 
     <!-- Accessibility -->
     <string name="logo_accessibility">UKFloodAlerts Logo</string>
@@ -24,6 +24,7 @@
     <string name="submit_power_outage">Power outage</string>
     <string name="submit_car_crash">Car Crash</string>
     <string name="submit_other">Other</string>
+    <string name="submit_details">Any more details?</string>
     <string name="submit_button">Submit</string>
 
     <!-- VIEW ALERT -->
@@ -40,5 +41,21 @@
     <string name="auth_hack">#floodhack</string>
     <string name="auth_campus">Google Campus</string>
     <string name="auth_techcity">Tech City UK</string>
+    <string name="auth_question">About</string>
+    <string name="auth_thanks">Thanks!</string>
+    
+    <string name="auth_about">A <b>#floodhack</b> project. 
+    
+    <a href="http://www.twitter.com/ukfloodalerts">Follow us on Twitter.</a> <b>Developers:</b> 
+    
+    <a href="http://www.twitter.com/robcresswell">Robert Cresswell</a>
+    
+    <a href="http://www.twitter.com/JuanJSebGarcia">Juan Garcia Alvite</a>
+    
+    <a href="http://www.twitter.com/John_R_Davidge">John Davidge</a>
+    
+    <a href="http://www.twitter.com/JackPeterFletch">Jack Fletcher</a>
+    
+    <a href="http://www.twitter.com/Nicolas_Panayio">Nicolas Panayiotou</a></string>
 
 </resources>
