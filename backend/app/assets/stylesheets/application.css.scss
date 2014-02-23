@@ -44,7 +44,7 @@ h2{
 	width:45px;
 	display:block;
 	position:absolute;
-	margin-top:3px;
+	margin-top:0px;
 }
 
 .navbar-header {
@@ -64,8 +64,8 @@ td{
 
 ul.nav.navbar-nav li a{
 	font-size: 16px;
-	padding: 10px;
-	margin-top:5px;
+	padding: 8px;
+	margin-top:9px;
 	transition: color 0.2s, background-color 0.2s;
 	-webkit-transition: color 0.2s, background-color 0.2s;
 }
@@ -83,6 +83,6 @@ ul.nav.navbar-nav li a:active{
 }
 
 .navbar-brand{
-	font-size: 16px;
+	font-size: 22px;
 	margin-left: 35px !important;
 }
