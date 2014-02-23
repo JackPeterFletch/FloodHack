@@ -46,7 +46,7 @@ GooglePlayServicesClient.OnConnectionFailedListener {
 		super.onCreate(savedInstanceState);
 		mLocationClient = new LocationClient(this, this, this);
 		geoloc = new Geocoder(getBaseContext());
-		setContentView(R.layout.main_menu);
+		setContentView(R.layout.main_view);
 		/*
 		String url ="http://eafa.shoothill.com/Home/BBC/86AD0194-A30F-4434-8C5D-FE7C0ED486D7";
 		WebView wv=(WebView) findViewById(R.id.webView1);

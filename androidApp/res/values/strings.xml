@@ -3,6 +3,11 @@
 
     <!-- GENERIC -->
     <string name="app_name">UKFloodAlerts</string>
+    <string name="app_read_name">UKFloodAlerts</string>
+
+    <!-- Accessibility -->
+    <string name="logo_accessibility">UKFloodAlerts Logo</string>
+    <string name="logo_uni_accessibility">University of Kent Logo</string>
 
     <!-- MAIN MENU -->
     <string name="main_submit_alert">Submit Alert</string>
@@ -19,6 +24,7 @@
     <string name="submit_power_outage">Power outage</string>
     <string name="submit_car_crash">Car Crash</string>
     <string name="submit_other">Other</string>
+    <string name="submit_button">Submit</string>
 
     <!-- VIEW ALERT -->
     <string name="view_title">View Alerts</string>
