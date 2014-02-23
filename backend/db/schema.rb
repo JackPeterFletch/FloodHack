@@ -14,31 +14,36 @@
 ActiveRecord::Schema.define(version: 20140216122100) do
 
   create_table "alerts", force: true do |t|
-    t.float    "latitude"
-    t.float    "longitude"
-    t.string   "postcode"
-    t.string   "alertType",  default: "", null: false
-    t.text     "desc"
+    t.float    "lat",        default: 0.0
+    t.float    "lon",        default: 0.0
+    t.string   "address",    default: "",  null: false
+    t.string   "alertType",  default: "",  null: false
+    t.text     "desc",       default: "",  null: false
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "alerts", ["id"], name: "index_alerts_on_id"
+  add_index "alerts", ["user_id"], name: "index_alerts_on_user_id"
+
   create_table "users", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.float    "latitude"
-    t.float    "longitude"
-    t.string   "postcode",               default: "", null: false
+    t.string   "email",                                          default: "",  null: false
+    t.string   "encrypted_password",                             default: "",  null: false
+    t.float    "lat"
+    t.float    "lon"
+    t.string   "address",                                        default: "",  null: false
+    t.string   "postcode",                                       default: "",  null: false
     t.string   "phone"
     t.string   "deviceID"
     t.string   "mobile"
     t.integer  "house_number"
+    t.decimal  "alert_radius",           precision: 3, scale: 1, default: 5.0, null: false
     t.string   "auth_token"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",                                  default: 0,   null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
@@ -47,8 +52,10 @@ ActiveRecord::Schema.define(version: 20140216122100) do
     t.datetime "updated_at"
   end
 
+  add_index "users", ["alert_radius"], name: "index_users_on_alert_radius"
   add_index "users", ["auth_token"], name: "index_users_on_auth_token", unique: true
   add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["id"], name: "index_users_on_id", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end

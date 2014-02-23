@@ -4,13 +4,15 @@ class DeviseCreateUsers < ActiveRecord::Migration
       ## Database authenticatable
       t.string :email,              :null => false, :default => ""
       t.string :encrypted_password, :null => false, :default => ""
-			t.float :latitude
-			t.float :longitude
+			t.float :lat
+			t.float :lon
+			t.string :address, :null => false, :default => ""
 			t.string :postcode, :null => false, :default => ""
 			t.string :phone
 			t.string :deviceID
 			t.string :mobile
 			t.integer :house_number
+			t.decimal :alert_radius, :precision => 3, :scale => 1,:null => false, :default => 5.0
 
 			## Auth Token
 			t.string :auth_token
@@ -44,9 +46,11 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.timestamps
     end
 
+    add_index :users, :id, :unique => true
     add_index :users, :email,                :unique => true
     add_index :users, :reset_password_token, :unique => true
     add_index :users, :auth_token,   :unique => true
+    add_index :users, :alert_radius
     # add_index :users, :confirmation_token,   :unique => true
     # add_index :users, :unlock_token,         :unique => true
   end
