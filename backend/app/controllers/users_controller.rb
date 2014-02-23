@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-#	before_filter :authenticate_user!, :except => [:new, :create]
 
 	def new
 	  @user = User.new
@@ -7,6 +6,9 @@ class UsersController < ApplicationController
 
 	def create
 		@user = User.new(user_params) 
+		location = Geocoders::MultiGeocoder.geocode(request.remote_ip)
+		@user.lon = location.lng
+		@user.lat = location.lat
 	end
 
 	def show
