@@ -5,7 +5,7 @@ class AlertsController < ApplicationController
 	end
 
 	def index
-		#@alerts = Alert.within(5, :origin => [current_user.lat, current_user.lon])
+		#@alerts = Alert.within(current_user.alert_radius, :origin => [current_user.lat, current_user.lon])
 		@alerts = Alert.all
 
 		respond_to do |format|
@@ -17,6 +17,7 @@ class AlertsController < ApplicationController
 	def create
 		@alert = Alert.new(alert_params)
 		@alert.user_id = current_user.id
+		#send_sms(@alert)
 		
 		respond_to do |format|
 			if @alert.save
@@ -81,19 +82,25 @@ class AlertsController < ApplicationController
     APNS.send_notifications([n1])		
 	end
 
-	def send_text_message(alert)
-	  send_to = params[:number_to_send_to]			 
+	def send_sms(alert)
 		twilio_sid = "AC2696e5d2bf3150fc92611658bd0c67e0"
 		twilio_token = "f12d330804c4ef780111dac021e7cacd"
-		twilio_phone_number = "1887451048"
-									 
 		@twilio_client = Twilio::REST::Client.new twilio_sid, twilio_token
-											 
-		@twilio_client.account.sms.messages.create(
-			:from => "+44#{twilio_phone_number}",
-			:to => send_to,
-			:body => alert.alertType
-		)
+			
+		#@users = User.all
+		#longitude = alert.lon
+		#latitude = alert.lat
+		title = alert.alertType
+		description = alert.desc
+		#@users.each do |u|
+		#	if User.within(u.alert_radius, [latitude, longitude])
+				@twilio_client.account.sms.messages.create(
+					:from => "+441887451048",
+					:to => "07804780481",
+					:body => (title+"\n \n"+description)
+				)	
+		#	end
+		#end
 	end
 
 	private
