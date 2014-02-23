@@ -26,6 +26,8 @@
 		4609729F18B0FDD900C7C0EE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4609729E18B0FDD900C7C0EE /* CFNetwork.framework */; };
 		460972A118B1185B00C7C0EE /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 460972A018B1185B00C7C0EE /* logo.png */; };
 		460972A318B118D000C7C0EE /* university-ukc-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 460972A218B118D000C7C0EE /* university-ukc-logo.png */; };
+		466AD12618BA447200237C5C /* FLUDReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 466AD12518BA447200237C5C /* FLUDReportViewController.m */; };
+		466AD12818BA4C7100237C5C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 466AD12718BA4C7100237C5C /* CoreLocation.framework */; };
 		75AF363D18B11F6100D41316 /* DataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AF363C18B11F6100D41316 /* DataClass.m */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +67,9 @@
 		4609729E18B0FDD900C7C0EE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		460972A018B1185B00C7C0EE /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		460972A218B118D000C7C0EE /* university-ukc-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "university-ukc-logo.png"; sourceTree = "<group>"; };
+		466AD12418BA447200237C5C /* FLUDReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLUDReportViewController.h; sourceTree = "<group>"; };
+		466AD12518BA447200237C5C /* FLUDReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLUDReportViewController.m; sourceTree = "<group>"; };
+		466AD12718BA4C7100237C5C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		75AF363B18B11F6100D41316 /* DataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataClass.h; sourceTree = "<group>"; };
 		75AF363C18B11F6100D41316 /* DataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				466AD12818BA4C7100237C5C /* CoreLocation.framework in Frameworks */,
 				4609729F18B0FDD900C7C0EE /* CFNetwork.framework in Frameworks */,
 				4609729A18B0E86E00C7C0EE /* MapKit.framework in Frameworks */,
 				4609726018B0DD7600C7C0EE /* CoreGraphics.framework in Frameworks */,
@@ -117,6 +123,7 @@
 		4609725C18B0DD7600C7C0EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				466AD12718BA4C7100237C5C /* CoreLocation.framework */,
 				4609729E18B0FDD900C7C0EE /* CFNetwork.framework */,
 				4609729918B0E86E00C7C0EE /* MapKit.framework */,
 				4609725D18B0DD7600C7C0EE /* Foundation.framework */,
@@ -135,6 +142,8 @@
 				75AF363B18B11F6100D41316 /* DataClass.h */,
 				75AF363C18B11F6100D41316 /* DataClass.m */,
 				4609726F18B0DD7600C7C0EE /* Main.storyboard */,
+				466AD12418BA447200237C5C /* FLUDReportViewController.h */,
+				466AD12518BA447200237C5C /* FLUDReportViewController.m */,
 				4609727218B0DD7600C7C0EE /* FLUDViewController.h */,
 				4609727318B0DD7600C7C0EE /* FLUDViewController.m */,
 				4609727518B0DD7600C7C0EE /* Images.xcassets */,
@@ -287,6 +296,7 @@
 				4609726A18B0DD7600C7C0EE /* main.m in Sources */,
 				75AF363D18B11F6100D41316 /* DataClass.m in Sources */,
 				4609726E18B0DD7600C7C0EE /* FLUDAppDelegate.m in Sources */,
+				466AD12618BA447200237C5C /* FLUDReportViewController.m in Sources */,
 				4609729D18B0E98200C7C0EE /* FLUDMapsViewController.m in Sources */,
 				4609727418B0DD7600C7C0EE /* FLUDViewController.m in Sources */,
 			);
