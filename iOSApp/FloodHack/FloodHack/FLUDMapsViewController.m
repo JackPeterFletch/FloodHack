@@ -45,6 +45,7 @@
     
     _CrowdMap.showsUserLocation = true;
     _CrowdMap.userTrackingMode = MKUserTrackingModeFollow;
+    _CrowdMap.delegate = self;
 	// Do any additional setup after loading the view.
     
     //Set event when SegControl hit
@@ -164,6 +165,20 @@
     //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert retreival failed" message:@"Do you have network connectivity?" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     //    [alert show];
     //}
+}
+
+//Delegate for Map
+- (void)mapView:(MKMapView *)aMapView didUpdateUserLocation:(MKUserLocation *)aUserLocation {
+    MKCoordinateRegion region;
+    MKCoordinateSpan span;
+    span.latitudeDelta = 0.005;
+    span.longitudeDelta = 0.005;
+    CLLocationCoordinate2D location;
+    location.latitude = aUserLocation.coordinate.latitude;
+    location.longitude = aUserLocation.coordinate.longitude;
+    region.span = span;
+    region.center = location;
+    [aMapView setRegion:region animated:YES];
 }
 
 
