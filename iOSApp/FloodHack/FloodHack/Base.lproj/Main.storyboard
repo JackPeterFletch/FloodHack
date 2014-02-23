@@ -134,11 +134,12 @@
                         <outlet property="CrowdMap" destination="FcD-fB-GEP" id="Mo6-rS-2fC"/>
                         <outlet property="MapChooser" destination="VEq-H3-nuh" id="hhO-YJ-Sjl"/>
                         <outlet property="WebMap" destination="5Eh-lp-AkE" id="Ift-tX-iAT"/>
+                        <outlet property="theView" destination="FcD-fB-GEP" id="mJ4-dT-Lno"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vzY-qx-Z3B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1111" y="-294"/>
+            <point key="canvasLocation" x="1111" y="-264"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hPp-AF-T6f">

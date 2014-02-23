@@ -70,7 +70,7 @@
     [latitude setString: [latitude stringByReplacingOccurrencesOfString:@"." withString:@"P"]];
     
     //Set Json Data
-    NSString *dataJson = [NSString stringWithFormat:@"{\"alert\":{\"alertType\": \"%@\",\"desc\": \"%@\",\"latitude\": \"%@\",\"longitude\": \"%@\"},\"commit\": \"Create Alert\",\"auth_token\": \"%@\"}",_incidentText, _decriptionField.text, longitude, latitude, authToken];
+    NSString *dataJson = [NSString stringWithFormat:@"{\"alert\":{\"alertType\": \"%@\",\"desc\": \"%@\",\"lat\": \"%@\",\"lon\": \"%@\"},\"commit\": \"Create Alert\",\"auth_token\": \"%@\"}",_incidentText, _decriptionField.text, longitude, latitude, authToken];
     NSData* postData= [dataJson dataUsingEncoding:NSUTF8StringEncoding];
     
     //Create URL Request
@@ -143,6 +143,8 @@
     if ([[jsonResultSet objectForKey:@"success"] boolValue]){
         
         NSLog(@"Submit Fucking succeeded");
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Thanks" message:@"Thanks for your report, we will alert those nearby!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
         
     } else {
         NSLog(@"Submit fucking failed");

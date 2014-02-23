@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface FLUDMapsViewController : UIViewController
+@interface FLUDMapsViewController : UIViewController <MKMapViewDelegate, NSURLConnectionDelegate>
+@property (weak, nonatomic) IBOutlet MKMapView *theView;
 
 @end
