@@ -5,44 +5,63 @@
 
     <ImageView
         android:id="@+id/main_logo_view"
-        android:contentDescription="@string/logo_accessibility"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp"
         android:adjustViewBounds="true"
+        android:contentDescription="@string/logo_accessibility"
         android:maxWidth="150dp"
         android:src="@drawable/logo" />
 
-    <Button
-        android:id="@+id/submitalertbutton"
-        android:layout_width="200dp"
+    <TextView
+        android:id="@+id/flood_hack"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/main_logo_view"
-        android:layout_marginLeft="76dp"
-        android:layout_marginTop="210dp"
-        android:layout_toRightOf="@+id/main_logo_view"
-        android:onClick="submitalert"
-        android:text="@string/main_submit_alert" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="@string/auth_hack"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Button
+        android:id="@+id/floodmapbutton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/flood_hack"
+        android:layout_alignParentLeft="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:onClick="floodmap"
+        android:text="@string/main_view_map" />
 
     <Button
         android:id="@+id/viewalertsbutton"
-        android:layout_width="200dp"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/submitalertbutton"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="137dp"
+        android:layout_above="@+id/floodmapbutton"
+        android:layout_alignParentLeft="true"
+        android:background="?android:attr/selectableItemBackground"
         android:onClick="viewalerts"
         android:text="@string/main_view_alerts" />
 
     <Button
-        android:id="@+id/floodmapbutton"
-        android:layout_width="200dp"
+        android:id="@+id/submitalertbutton"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/viewalertsbutton"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/submitalertbutton"
-        android:layout_marginLeft="111dp"
-        android:layout_marginTop="127dp"
-        android:onClick="floodmap"
-        android:text="@string/main_view_map" />
+        android:background="?android:attr/selectableItemBackground"
+        android:onClick="submitalert"
+        android:text="@string/main_submit_alert" />
+
+    <Button
+        android:id="@+id/auth_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:onClick="showAuth"
+        android:text="@string/auth_question" />
 
 </RelativeLayout>

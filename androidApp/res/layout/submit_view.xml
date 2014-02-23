@@ -4,22 +4,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <ImageView
-        android:id="@+id/submit_logo_view"
+    <TextView
+        android:id="@+id/submit_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/submit_button"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="27dp"
-        android:contentDescription="@string/logo_accessibility"
-        android:src="@drawable/ic_launcher" />
+        android:text="@string/submit_finding"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="@string/submit_button" />
+
+    <EditText
+        android:id="@+id/submit_description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/submit_location"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="48dp"
+        android:ems="10"
+        android:hint="@string/submit_details"
+        android:lines="2"
+        android:maxLines="2"
+        android:inputType="textMultiLine|textAutoCorrect|textCapSentences" >
+    </EditText>
 
     <TextView
         android:id="@+id/submit_title"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="38dp"
         android:text="@string/submit_title"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -27,65 +50,58 @@
         android:id="@+id/radioAlert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center" >
+        android:layout_above="@+id/submit_description"
+        android:layout_alignParentLeft="true" >
+
+        <RadioButton
+            android:id="@+id/submit_water_receed"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/submit_water_receeded" />
+
+        <RadioButton
+            android:id="@+id/submit_flood_banks"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit_flooded_banks" />
+
+        <RadioButton
+            android:id="@+id/submit_crash"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit_car_crash" />
+
+        <RadioButton
+            android:id="@+id/submit_stranded_people"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit_stranded_people" />
+
+        <RadioButton
+            android:id="@+id/submit_road"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit_road_closure" />
+
+        <RadioButton
+            android:id="@+id/submit_stranded_animals"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:text="@string/submit_stranded_animals" />
+
+        <RadioButton
+            android:id="@+id/submit_power"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit_power_outage" />
+
+        <RadioButton
+            android:id="@+id/submit_other"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit_other" />
     </RadioGroup>
-
-    <RadioButton
-        android:id="@+id/submit_road"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="@string/submit_road_closure" />
-
-    <RadioButton
-        android:id="@+id/submit_flood_banks"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="@string/submit_flooded_banks" />
-
-    <RadioButton
-        android:id="@+id/submit_stranded_people"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="@string/submit_stranded_people" />
-
-    <RadioButton
-        android:id="@+id/submit_stranded_animals"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="@string/submit_stranded_animals" />
-
-    <RadioButton
-        android:id="@+id/submit_water_receed"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="@string/submit_water_receeded" />
-
-    <RadioButton
-        android:id="@+id/submit_power"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="@string/submit_power_outage" />
-
-    <RadioButton
-        android:id="@+id/submit_crash"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="@string/submit_car_crash" />
-
-    <RadioButton
-        android:id="@+id/submit_other"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="@string/submit_other" />
-
-    <Button
-        android:id="@+id/submit_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp"
-        android:text="@string/submit_button" />
 
 </RelativeLayout>
