@@ -12,6 +12,77 @@
  */
 
 @import 'bootstrap';
-@import 'bootstrap/theme';
+//@import 'bootstrap/theme';
 
+.centerText{
+	text-align:center;
+}
 
+body{
+	font-size:16px;
+}
+
+.btn{
+	font-size:16px;
+}
+
+h1{
+	margin-top:0px;
+	margin-bottom:15px;
+}
+
+h2{
+	margin-top:0px;
+	margin-bottom:15px;
+}
+
+.navbar{
+	min-height:70px;
+}
+
+#logo{
+	width:45px;
+	display:block;
+	position:absolute;
+	margin-top:3px;
+}
+
+.navbar-header {
+	margin: 0px !important;
+}
+
+.container-fluid{
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top:10px;
+}
+
+td{
+	line-height:40px !important;
+	vertical-align:center !important;
+}
+
+ul.nav.navbar-nav li a{
+	font-size: 16px;
+	padding: 10px;
+	margin-top:5px;
+	transition: color 0.2s, background-color 0.2s;
+	-webkit-transition: color 0.2s, background-color 0.2s;
+}
+
+ul.nav.navbar-nav li a:hover{
+	background-color: #40D7FF;
+	color: #FFFFFF;
+	border-radius: 3px;
+}
+
+ul.nav.navbar-nav li a:active{
+	background-color: #40D7FF;
+	color: #FFFFFF;
+	border-radius: 3px;
+}
+
+.navbar-brand{
+	font-size: 16px;
+	margin-left: 35px !important;
+}

@@ -1,14 +1,54 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>FloodHack</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+  	<title>UKFloodAlerts</title>
+  	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+		<%= csrf_meta_tags %>
+		<%= favicon_link_tag "browser-icon.ico" %>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	</head>
 
-<%= yield %>
+	<body>
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">	
+				<div class="navbar-header">
+					<% if user_signed_in? %>
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					<% end %>
+					<%= image_tag 'logo.png', :id =>"logo" %>
+					<a class="navbar-brand" href="local"><strong>UKFloodAlerts</strong></a>
+				</div>
 
-</body>
+				<% if user_signed_in? %>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li><%= link_to 'Local Alerts', 'local' %> </li>
+							<li><%= link_to 'Alerts You\'ve Posted', 'posted_alerts' %></li>
+							<li><%= link_to 'Edit Account', 'edit_account' %></li>
+							<li><%= link_to 'Sign Out', 'log_out' %></li>
+						</ul>
+					</div>
+				<% end %>
+			</div>
+		</nav>
+
+		<div class="container-fluid">
+			<% if flash[:alert] %>
+				<div class="alert alert-danger"><%= flash[:alert] %></div>
+			<% end %>
+
+			<% if flash[:notice] %>
+				<div class="alert alert-success"><%= flash[:notice] %></div>
+			<% end %>
+
+			<%= yield %>
+		</div>
+
+	</body>
 </html>

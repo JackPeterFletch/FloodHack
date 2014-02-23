@@ -1,5 +1,4 @@
 class AlertsController < ApplicationController
-	#before_filter :authenticate_user!
 
 	def new
 	  @alert = Alert.new
@@ -7,16 +6,20 @@ class AlertsController < ApplicationController
 
 	def index
 	  @alerts = Alert.all
+
+		respond_to do |format|
+			format.html
+			format.json { render :json => @alerts }
+		end
 	end
 
 	def create
 		@alert = Alert.new(alert_params)
+		@alert.user_id = current_user.id
 		if @alert.save
-			redirect_to(root_url, :notice => "Alert Saved!")
-			# Send notifications
-			sendAlert(@alert)
+			redirect_to(alerts_path, :notice => "Alert Saved!")
 		else
-			render("new", :alert => "Alert Not Saved!")
+			render 'new', :alert => "Error! Alert Not Saved!"
 		end
 	end
 
@@ -28,13 +31,20 @@ class AlertsController < ApplicationController
 		@alert = Alert.find(params[:id])
 	end
 
+	def destroy
+		@alert = Alert.find(params[:id])
+		@alert.destroy
+
+		redirect_to alerts_path
+	end
+
 	def update
 		@alert = Alert.find(params[:id])
-
+		#send_text_message(@alert)
 		if @alert.update(alert_params)
-			redirect_to(root_url, :notice => "Alert Updated!")
+			redirect_to(alerts_path, :notice => "Alert Updated!")
 		else
-			redirect_to(edit_alert_path(@alert.id), :alert => "Error! Alert Not Updated!")
+			render 'edit', :alert => "Error! Alert Not Updated!"
 		end 
 	end
 
@@ -51,7 +61,6 @@ class AlertsController < ApplicationController
 			notification = APNS::Notification.new(user.deviceID, :alert => Alert.find(params[:id]).type + ' near your location', :badge => 1, :sound => 'default')
 			APNS.send_notications([notification])
 		end
-
 	end
 
 	def alertTest
@@ -66,10 +75,25 @@ class AlertsController < ApplicationController
     APNS.send_notifications([n1])		
 	end
 
+	def send_text_message(alert)
+	  send_to = params[:number_to_send_to]			 
+		twilio_sid = "AC2696e5d2bf3150fc92611658bd0c67e0"
+		twilio_token = "f12d330804c4ef780111dac021e7cacd"
+		twilio_phone_number = "1887451048"
+									 
+		@twilio_client = Twilio::REST::Client.new twilio_sid, twilio_token
+											 
+		@twilio_client.account.sms.messages.create(
+			:from => "+44#{twilio_phone_number}",
+			:to => send_to,
+			:body => alert.alertType
+		)
+	end
+
 	private
 
 	def alert_params
-		params.require(:alert).permit(:id, :lat, :lng, :postcode, :alertType, :desc, :user_id, :created_at, :updated_at)
+		params.require(:alert).permit(:id, :latitude, :longitude, :postcode, :alertType, :desc, :user_id, :created_at, :updated_at)
 	end
 
 end

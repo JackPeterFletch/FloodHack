@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/splash_logo_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/logo_accessibility"
+        android:maxHeight="200dp"
+        android:maxWidth="200dp"
+        android:src="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/uni_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/logo_uni_accessibility"
+        android:maxWidth="100dp"
+        android:src="@drawable/uni_logo" />
+
+    <TextView
+        android:id="@+id/flood_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/uni_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="34dp"
+        android:text="@string/app_read_name"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="30sp" />
+
+</RelativeLayout>

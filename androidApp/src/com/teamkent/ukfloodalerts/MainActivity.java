@@ -13,9 +13,15 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
+import android.os.Handler;
 import android.app.Activity;
+import android.content.Intent;
 import android.content.IntentSender;
 import android.view.Menu;
+import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.webkit.WebSettings.PluginState;
 
 public class MainActivity extends Activity implements
 LocationListener,
@@ -33,19 +39,34 @@ GooglePlayServicesClient.OnConnectionFailedListener {
 
 	private final static int CONNECTION_FAILURE_RESOLUTION_REQUEST = 9000;
 
+	private static int SPLASH_TIME_OUT = 2000;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
 		mLocationClient = new LocationClient(this, this, this);
 		geoloc = new Geocoder(getBaseContext());
-	}
+		setContentView(R.layout.main_view);
+		/*
+		String url ="http://eafa.shoothill.com/Home/BBC/86AD0194-A30F-4434-8C5D-FE7C0ED486D7";
+		WebView wv=(WebView) findViewById(R.id.webView1);
+		wv.getSettings().setJavaScriptEnabled(true);
+		wv.getSettings().setPluginState(PluginState.ON);
+		wv.getSettings().setAllowFileAccess(true); 
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
+		wv.setWebViewClient(new WebViewClient());
+		wv.loadUrl(url);
+
+		String url2 ="http://10.100.84.171:3000";
+		WebView wv2=(WebView) findViewById(R.id.webView1);
+		wv2.getSettings().setJavaScriptEnabled(true);
+		wv2.getSettings().setPluginState(PluginState.ON);
+		wv2.getSettings().setAllowFileAccess(true); 
+
+		wv2.setWebViewClient(new WebViewClient());
+		wv2.loadUrl(url2);
+		 */
+
 	}
 
 	/*
@@ -181,4 +202,24 @@ GooglePlayServicesClient.OnConnectionFailedListener {
 		String concat = "" + list.get(0).getLatitude() + ":" + list.get(0).getLongitude();
 		return concat;
 	}
+
+	public String showLatLong(){
+		return "" + getLat(mLocation) + getLong(mLocation);
+	}
+
+	public void submitalert(View view){
+		Intent i = new Intent(this, SubmitActivity.class);
+		startActivity(i);
+	}
+
+	public void floodmap(View view){
+		Intent i = new Intent(this, MapActivity.class);
+		startActivity(i);
+	}
+
+	public void viewalerts(View view){
+		Intent i = new Intent(this, AlertsActivity.class);
+		startActivity(i);
+	}
+
 }

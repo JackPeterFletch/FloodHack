@@ -1,23 +1,22 @@
 class UsersController < ApplicationController
-	#skip_before_filter :autheticate_user!, :only => [:new, :create]
+#	before_filter :authenticate_user!, :except => [:new, :create]
 
 	def new
 	  @user = User.new
 	end
 
 	def create
-		@user = User.new()
-		@user.email = params[:email]
-		@user.password = params[:password]
-		if @user.save
-			format.json { render :json => @user }
-		else
-			format.json { render :json => @user.errors, :status => :unprocessable_entity }
-		end
+		@user = User.new(user_params) 
 	end
 
 	def show
-		@user = !params[:id].nil? ? User.find(params[:id]) : current_user
+		@user = current_user
+		@alerts = @user.alerts
+
+		respond_to do |format|
+			format.html
+			format.json { render :json => @user, :include => :alerts }
+		end
 	end
 
 	def edit
@@ -34,14 +33,10 @@ class UsersController < ApplicationController
 		end 
 	end
 
-#	def admin
-#		render "admin"
-#	end
-
 	private
 
 	def user_params
-		params.require(:user).permit(:firstName, :lastName, :lat, :lng, :postcode, :phone, :deviceID, :mobile)
+		params.require(:user).permit(:latitude, :longitude, :postcode, :phone, :deviceID, :mobile, :house_number)
 	end
 
 end

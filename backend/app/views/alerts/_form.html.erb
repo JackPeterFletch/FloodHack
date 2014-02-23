@@ -1,10 +1,35 @@
-<%= form_for(@alert) do |f| %>
+<%= form_for(@alert, :role => "form") do |f| %>
+	<div class="form-group">
+		<%= f.radio_button :alertType, "Burst River Bank" %>
+		<%= f.label "alertType_burst_river_bank", "Burst River Bank" %>
+	</div>
 
-	<%= f.text_area :alertType, :placeholder => 'Alert Type' %>
-	<br/>
-	<%= f.text_area :desc, :placeholder => 'Description' %>
-	<br/>
+	<div class="form-group">
+		<%= f.radio_button :alertType, "Power Down" %>
+		<%= f.label "alertType_power_down", "Power Down" %>
+	</div>
 
-	<%= f.submit %>
+	<div class="form-group">
+		<%= f.radio_button :alertType, "Flooded Road" %>
+		<%= f.label "alertType_flooded_road", "Flooded Road" %>
+	</div>
 
+	<div class="form-group">
+		<%= f.radio_button :alertType, "Trapped Person" %>
+		<%= f.label "alertType_trapped_person", "Trapped Person" %>
+	</div>
+
+	<div class="form-group">
+		<%= f.radio_button :alertType, "Other" %>
+		<%= f.label "alertType_other", "Other" %>
+	</div>
+		
+	<div class="form-group">
+		<%= f.text_area :desc, :class => "form-control", :placeholder => 'Description (Optional)', :rows => 3 %>
+	</div>
+
+	<div class="form-group">
+		<%= f.submit :class =>"btn btn-success btn-md" %>
+	</div>
+	
 <% end %>

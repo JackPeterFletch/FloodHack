@@ -1,29 +1,24 @@
-<h1>Alert List</h1>
+<div class="panel panel-default">
+	<div class="panel-heading text-right">
+		<%= link_to 'Post Alert', new_alert_path, :class => "btn btn-success btn-md" %>
+	</div>
+	<div class="table-responsive">
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr class="row">
+					<th class="col-xs-3 col-sm-3 col-md-3 col-lg-3 centerText">Type</th>
+					<th class="col-xs-9 col-sm-9 col-md-9 col-lg-9 centerText">Description</th>
+				</tr>
+			</thead>
 
-<%= link_to 'Create Alert', new_alert_path, :class => "btn btn-default btn-md" %>
-
-<br/>
-
-<table>
-	<thead>
-		<tr>
-			<th>ID</th>
-			<th>Type</th>
-			<th></th>
-			<th></th>
-			<th></th>
-		</tr>
-	</thead>
-
-	<tbody>
-		<% @alerts.each do |alert| %>
-			<tr>
-				<td><%= alert.id %></td>
-				<td><%= alert.alertType %></td>
-				<td><%= link_to 'Show', alert_path(alert), :class => "btn btn-default btn-md" %></td>
-				<td><%= link_to 'Edit', edit_alert_path(alert), :class => "btn btn-default btn-md" %></td>
-				<td><%= link_to 'Delete', alert, :method => :delete, :class => "btn btn-default btn-md", :confirm => "Delete Alert: Are you sure" %></td>
-			</tr>
-		<% end %>
-	</tbody>
-</table>
+			<tbody>
+				<% @alerts.each do |alert| %>
+					<tr class="row">
+						<td><%= alert.alertType %></td>
+						<td><%= alert.desc %></td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>

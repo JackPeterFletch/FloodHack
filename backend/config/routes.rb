@@ -1,22 +1,26 @@
 FloodHack::Application.routes.draw do
-	namespace :api do
-	  devise_for :users
-		resources :recipes, :only=>[:index, :show]
-	end  
+	devise_for :users, :controllers => { :sessions => "sessions", :registrations => "registrations" }
 
-	devise_for :users
+	authenticated do
+	  root :to => 'alerts#index', as: :authenticated
+	end
+
+	devise_scope :user do
+		get 'log_out' => 'devise/sessions#destroy'
+		get 'log_in' => 'devise/sessions#new'
+		get 'edit_account' => 'devise/registrations#edit'
+  	root to: 'devise/sessions#new'
+	end
 
 	resources :users
 	resources :alerts
 
-  match 'users/:email/:password' => 'users#create' => :via :post
-  match 'alerttest' => 'alerts#alertTest', :via => :get
+  get 'alerttest' => 'alerts#alertTest'
+	get '/local' => 'alerts#index'
+	get '/posted_alerts' => 'users#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
-  root 'alerts#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

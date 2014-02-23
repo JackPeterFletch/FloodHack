@@ -10,8 +10,17 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require fastclick.min
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap
-//= require_tree .
+//= require bootstrap/transition
+// require bootstrap/dropdown
+//= require bootstrap/collapse
+//= require bootstrap/alert
+//
+// require_tree .
+
+window.addEventListener('load', function() {
+	    FastClick.attach(document.body);
+}, false);

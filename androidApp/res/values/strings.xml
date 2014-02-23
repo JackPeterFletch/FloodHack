@@ -1,8 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- GENERIC -->
     <string name="app_name">UKFloodAlerts</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_read_name">UKFloodAlerts</string>
+
+    <!-- Accessibility -->
+    <string name="logo_accessibility">UKFloodAlerts Logo</string>
+    <string name="logo_uni_accessibility">University of Kent Logo</string>
+
+    <!-- MAIN MENU -->
+    <string name="main_submit_alert">Submit Alert</string>
+    <string name="main_view_alerts">Alerts</string>
+    <string name="main_view_map">Flood Map</string>
+
+    <!-- SUBMIT ALERT -->
+    <string name="submit_title">Submit an Alert</string>
+    <string name="submit_road_closure">Road Closure</string>
+    <string name="submit_flooded_banks">Flooded Banks</string>
+    <string name="submit_stranded_people">Stranded People</string>
+    <string name="submit_stranded_animals">Stranded Animals</string>
+    <string name="submit_water_receeded">Water receded</string>
+    <string name="submit_power_outage">Power outage</string>
+    <string name="submit_car_crash">Car Crash</string>
+    <string name="submit_other">Other</string>
+    <string name="submit_button">Submit</string>
+
+    <!-- VIEW ALERT -->
+    <string name="view_title">View Alerts</string>
+
+    <!-- CREDITS -->
+    <string name="auth_uni">University of Kent</string>
+    <string name="auth_school">School of Computing</string>
+    <string name="auth_john">John Davidge</string>
+    <string name="auth_jack">Jack Fletcher</string>
+    <string name="auth_rob">Rober Cresswell</string>
+    <string name="auth_juan">Juan Garcia Alvite</string>
+    <string name="auth_nic">Nicolas Panayiotou</string>
+    <string name="auth_hack">#floodhack</string>
+    <string name="auth_campus">Google Campus</string>
+    <string name="auth_techcity">Tech City UK</string>
 
 </resources>

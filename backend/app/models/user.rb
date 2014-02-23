@@ -6,20 +6,21 @@ class User < ActiveRecord::Base
 
 	has_many :alerts
 
-	before_save :ensure_authentication_token
+	# before callback set up for the token.
+	before_save :ensure_auth_token
 
-	def ensure_authentication_token
-		  if authentication_token.blank?
-				    self.authentication_token = generate_authentication_token
-						  end
-	end
+  def ensure_auth_token
+    if auth_token.blank?
+      self.auth_token = generate_auth_token
+    end
+  end
 
-	private
-
-	  def generate_authentication_token
-			    loop do
-						      token = Devise.friendly_token
-									      break token unless User.find_by(authentication_token: token)
-												    end
-					  end
+  private
+                         
+  def generate_auth_token
+    loop do
+      token = Devise.friendly_token
+      break token unless User.where(auth_token: token).first
+    end
+  end
 end
