@@ -16,10 +16,15 @@ class AlertsController < ApplicationController
 	def create
 		@alert = Alert.new(alert_params)
 		@alert.user_id = current_user.id
-		if @alert.save
-			redirect_to(alerts_path, :notice => "Alert Saved!")
-		else
-			render 'new', :alert => "Error! Alert Not Saved!"
+		
+		respond_to do |format|
+			if @alert.save
+				format.html{redirect_to(alerts_path, :notice => "Alert Saved!")}	
+				format.json{render :status => 201, :json => {:success => true}}
+			else
+				format.html{render 'new', :alert => "Error! Alert Not Saved!"}
+				format.json{render :status => 406, :json => {:success => false}}
+			end
 		end
 	end
 

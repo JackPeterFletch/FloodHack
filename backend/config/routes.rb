@@ -1,10 +1,9 @@
 FloodHack::Application.routes.draw do
-	devise_for :users, :controllers => { :sessions => "sessions", :registrations => "registrations" }
-
 	authenticated do
 	  root :to => 'alerts#index', as: :authenticated
 	end
 
+	devise_for :users, :controllers => { :sessions => "sessions", :registrations => "registrations" }
 	devise_scope :user do
 		get 'log_out' => 'devise/sessions#destroy'
 		get 'log_in' => 'devise/sessions#new'
