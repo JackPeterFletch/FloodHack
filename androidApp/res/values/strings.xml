@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- TEMP -->
+    <string name="host">http://192.168.1.4:3000</string>
+
     <!-- GENERIC -->
     <string name="app_name">UKFloodAlerts</string>
     <string name="app_read_name">UK Flood Alerts</string>
@@ -44,13 +47,6 @@
     <string name="auth_techcity">Tech City UK</string>
     <string name="auth_question">About</string>
     <string name="auth_thanks">Thanks!</string>
-    
-    <string name="auth_about">A <b>#floodhack</b> project. 
-    <a href="http://www.twitter.com/ukfloodalerts">Follow us on Twitter.</a> <b>Developers:</b>    
-    <a href="http://www.twitter.com/robcresswell">Robert Cresswell</a>    
-    <a href="http://www.twitter.com/JuanJSebGarcia">Juan Garcia Alvite</a>    
-    <a href="http://www.twitter.com/John_R_Davidge">John Davidge</a>    
-    <a href="http://www.twitter.com/JackPeterFletch">Jack Fletcher</a>    
-    <a href="http://www.twitter.com/Nicolas_Panayio">Nicolas Panayiotou</a></string>
+    <string name="auth_about">A <b>#floodhack</b> project. <a href="http://www.twitter.com/ukfloodalerts">Follow us on Twitter.</a><b>Developers:</b><a href="http://www.twitter.com/robcresswell">Robert Cresswell</a><a href="http://www.twitter.com/JuanJSebGarcia">Juan Garcia Alvite</a><a href="http://www.twitter.com/John_R_Davidge">John Davidge</a><a href="http://www.twitter.com/JackPeterFletch">Jack Fletcher</a><a href="http://www.twitter.com/Nicolas_Panayio">Nicolas Panayiotou</a></string>
 
 </resources>
