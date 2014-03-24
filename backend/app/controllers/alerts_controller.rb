@@ -83,8 +83,6 @@ class AlertsController < ApplicationController
 	end
 
 	def send_sms(alert)
-		twilio_sid = "AC2696e5d2bf3150fc92611658bd0c67e0"
-		twilio_token = "f12d330804c4ef780111dac021e7cacd"
 		@twilio_client = Twilio::REST::Client.new twilio_sid, twilio_token
 			
 		#@users = User.all
